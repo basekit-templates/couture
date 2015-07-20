@@ -1,0 +1,478 @@
+// ---------------------------------
+// Apparel: CSS > Template Theme
+// ---------------------------------
+
+// 1. #HEADER, PROFILE HEADER & FOOTER
+// 2. #TYPOGRAPHY
+// 3. #FORMS
+// 4. #BUTTONS
+// 5. #IMAGES
+
+
+
+
+// -----------------------------
+// 1. #Header, Profile Header & Footer
+// -----------------------------
+
+.template-header,
+.template-footer {
+	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+	min-height: 80px;
+	background-color: @color-swatch3;
+	// Tablet: reduce height
+}
+
+.profile-header, 
+.logo-banner {
+    background-color: @color-swatch7;
+    @media @tablet {
+        text-align: center;
+    }
+}
+
+.logo-banner {
+    text-align: center;
+}
+
+
+
+// 4.  #Widget Profile Header
+// -----------------------------
+
+
+// Left 
+.widgetcontent-left {
+     -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    padding-top: 10px;
+    @media @tablet {
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        margin: 0;
+        width: 100%;
+        padding-top: 0;
+    }
+}
+
+// Right
+.widgetprofile-right {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    padding-top: 10px;
+    @media @tablet {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+        margin: 0;
+        width: 100%;
+        padding-top: 0;
+        text-align: center!important;
+    }
+    .socialicons__social-list {
+        float: right;
+        @media @tablet {
+            float: initial;
+        }
+    }
+}
+
+// 4.  #Logo Banner
+// -----------------------------
+
+
+// Content Widget Left 
+.logo-banner-left {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @tablet {
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+// Logo Center
+.logo-banner-center {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    margin: 0 10px;
+    @media @tablet {
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+// Content Widget right
+.logo-banner-right {
+    -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @tablet {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+// Footer
+// ------
+
+.template-footer {
+	min-height: 100px;
+	background-color: @color-swatch3;
+	text-align: center;
+	color: @font-swatch9-color;
+	// Change heading elements to white
+	h1, h2, h3, h4 {
+		color: @font-swatch9-color;
+	}
+	// Lighten paragraph & link elements
+	p, a {
+		color: @font-swatch9-color;
+		padding: 0;
+	}
+	// Reset Twitter feed styles
+	.twitter-feed {
+		padding: 0;
+		background-color: transparent;
+	}
+}
+
+
+
+
+// -----------------------------
+// 2. #Typography
+// -----------------------------
+
+// Colour Swatches
+// ---------------
+
+// @color-swatch1: Background 
+// @color-swatch2: Contrast
+// @color-swatch3: Buttons
+// @color-swatch4: Headings
+// @color-swatch5: Paragraph
+// @color-swatch6: Navigation Links
+// @color-swatch7: Spare
+
+
+// Font Swatches
+// -------------
+
+// font1:  Heading 1
+// font2:  Heading 2
+// font3:  Heading 3
+// font4:  Heading 4
+// font5:  Paragraph
+// font6:  Navigation Link
+// font7:  Buttons
+// font8:  Feature Headline
+// font9:  Feature Strapline
+// font10: Company Name (Logo)
+
+
+// Standard Text Link
+// ------------------
+
+a { 
+    color: @color-swatch2; 
+}
+
+
+// Blockquote
+// ----------
+
+blockquote:before {
+	margin-right: 10px;
+	font-size: 32px;
+	color: @color-swatch3;
+}
+
+// Heading's BKscale for Mobile
+// ----------
+
+.logo-banner-left h1,
+.logo-banner-right h1,
+h1 {
+    @media @tablet {
+        font-size: bkscale(@font-swatch1-font-size,0.8);
+        line-height: bkscale(@font-swatch1-line-height,0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch1-font-size,0.8);
+        line-height: bkscale(@font-swatch1-line-height,0.9);
+    }
+}
+
+h2 {
+    @media @mobile {
+        font-size: bkscale(@font-swatch2-font-size,0.8);
+        line-height: bkscale(@font-swatch2-line-height,0.9);
+    }
+}
+
+h3 {
+    @media @mobile {
+        font-size: bkscale(@font-swatch3-font-size,0.8);
+        line-height: bkscale(@font-swatch3-line-height,0.9);
+    }
+}
+
+h4 {
+    @media @tablet {
+        font-size: bkscale(@font-swatch4-font-size,0.8);
+        line-height: bkscale(@font-swatch4-line-height,0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch4-font-size,0.8);
+        line-height: bkscale(@font-swatch4-line-height,0.9);
+    }
+}
+
+
+
+// -----------------------------
+// 3. #Forms
+// -----------------------------
+
+// Form
+// ----------
+
+form, 
+.form {
+    background-color: @color-swatch7;
+    padding: 20px;
+    position: relative;
+    &:after {
+        border: 8px solid @color-swatch1;
+        content: "";
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    @media @tablet {
+        text-align: center;
+    }
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+// Form Body
+.form-body {
+	margin: 10px 0 20px;
+    position: relative; 
+    z-index: 9999;
+	@media @mobile {
+		margin: 20px;
+	}
+}
+
+// Form Group
+.form-group { 
+	margin-bottom: 20px;
+	@media @mobile {
+		margin-bottom: 10px;
+	}
+}
+
+
+// Legend
+// ----------
+
+legend { 
+	width: 100%;
+	padding: 30px 30px;
+	color: @font-swatch4-color;
+	@media @mobile {
+		padding: 6px 20px;
+	}
+}
+
+// Select
+// ----------
+
+select {
+    height: 36px;
+    outline: none;
+    border: 1px solid darken(@color-swatch1,10%);
+    border-radius: 0;
+    background-color: @color-swatch1;
+    font-size: 12px;
+    text-indent: 0;
+    &:hover, &:focus {
+        background-color: @color-swatch1;
+        cursor: pointer;
+	}
+}
+
+.signupform__legend {
+    display: none;
+}
+
+// Inputs: Text
+// ------------
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+    border: 1px solid darken(@color-swatch7,8%);
+    -webkit-appearance: none;
+    background-color: @color-swatch1;
+    border-radius: 0;
+    &:focus {
+        border: 1px solid darken(@color-swatch7,8%)!important;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+input.input[type=email]:focus, 
+input.input[type=search]:focus, 
+.contact-form__textarea:focus {
+    border: 1px solid darken(@color-swatch7,8%)!important;
+}
+
+.signupform__label, 
+.contactform__legend, 
+.blogsearch__legend {
+    border-bottom: 0;
+    text-align: center;
+    font-size: @font-swatch1-font-size;
+    font-weight: @font-swatch1-font-weight;
+    padding: 30px 0 0;
+}
+
+.signupform__label {
+   padding: 30px 0 10px;
+}
+
+.signupform__input {
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+    .button--submit {
+        display: inline-block;
+        float: right;
+        min-width: 20%;
+        vertical-align: bottom;
+        margin-top: 21px;
+    }
+}
+
+.signupform__form-group {
+    .clearfix
+}
+
+
+
+
+// -----------------------------
+// 4. #Buttons
+// -----------------------------
+
+button, 
+.button,
+.blogpostlist__read-more {
+    padding: 8px 50px;
+    background-color: @color-swatch3;
+    color: @font-swatch7-color;
+    .transition (all,0.1s, ease-in-out);
+
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+
+
+
+
+// -----------------------------
+// 5. #Images
+// -----------------------------
+
+// Image Captions
+// --------------
+
+// Gallery & Slideshow
+.image-title,
+.image-description {
+	color: @color-swatch1;
+}
+
+// Image Widget
+.image-widget__caption { margin: 10px 0; }
+.image-widget__image-title,
+.image-widget__image-description {
+	color: @font-swatch5-color;
+	text-shadow: none;
+}

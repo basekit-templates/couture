@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if lt IE 7]>
+	<html class="no-js ie6 oldie" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+	<html class="no-js ie7 oldie" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+	<html class="no-js ie8 oldie" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ page.seoLang }}">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>{{ page.title }}</title>
+	<meta name="keywords" content="{{ page.keywords }}" />
+	<meta name="description" content="{{ page.description }}" />
+	<meta http-equiv="content-language" content="{{ page.seoLang }}" />
+
+	{% if site.favicon %}
+		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
+		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
+	{% endif %}
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	{% include basekit.headScript %}
+</head>
+<body class="{{ page.backgroundClass }}">
+
+	{% block content %}
+	{% endblock %}
+
+    {% include basekit.bodyScript %}
+
+    
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')</script>
+
+    	<!-- Nav Menu Script -->
+        <script>
+            // Toggles class open to display/hide the whole navigation
+            $( ".navigation-toggle" ).click(function() {
+                $( ".bk-extendednavigation" ).toggleClass( "open" );
+            });
+            // Togglse class open to display/hide folders
+            $( ".navigation-item.folder" ).each(function() {
+                $( this ).click(function() {
+                    $( this ).toggleClass( "open" );
+                });
+            });
+
+            // Set a data attribute that matches the content of the nav item
+            var link = document.querySelectorAll('.item-name');
+            for (i = 0; i < link.length; i++) { 
+                link[i].setAttribute("data-hover", link[i].innerHTML);
+            }
+        </script>
+
+</body>
+</html>

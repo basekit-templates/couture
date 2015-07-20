@@ -1,0 +1,273 @@
+// -----------------------------
+// Apparel: CSS > Navigation
+// -----------------------------
+
+
+// Transition
+// --------------
+
+/* Effect 15: scale down, reveal */
+.extendednavigation__item-name {
+    color: @font-swatch6-color;
+    font-weight: 700;
+    text-shadow: none;
+    text-rendering: optimizelegibility;
+}
+
+.extendednavigation__item-name::before {
+    color: @font-swatch6-color;
+    content: attr(data-hover);
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.5s, opacity 0.3s;
+    transition: transform 0.5s, opacity 0.3s;
+    text-rendering: optimizelegibility;
+}
+
+.extendednavigation__item-name:hover::before,
+.extendednavigation__item-name:focus::before {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+
+// Navigation Bar
+// --------------
+
+.widget__extendednavigation {
+    margin-left: auto;
+}
+
+.navigation-bar {
+	background-color: @color-swatch2;
+}
+
+
+// Navigation List
+// ---------------
+
+.navigation-list {
+	min-width: 220px;
+	margin: 0;
+}
+
+
+// Default Page
+.default-page .navigation-list--children {
+	background-color: @color-swatch2;
+}
+
+// Navigation Item
+// ---------------
+
+.navigation-item {
+	@media @tablet {
+		width: 100%;
+	}
+}
+
+
+// Navigation Link
+.navigation-item .item-name {
+	padding: 5px 15px;
+    color: transparent;
+    &:hover {
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+.item-name {
+	padding: 16px 20px;
+}
+
+// Selected Class
+.extendednavigation li.selected > a  {
+    color: @font-swatch6-color-hover;
+    &:before {
+        color: @font-swatch6-color-hover;
+    }
+}
+
+.navigation-item.folder .navigation-item--child a {
+    color: @font-swatch4-color;
+    &:before {
+        color: @font-swatch4-color;
+    }
+    &:hover {
+        color: @font-swatch6-color-hover;
+    }
+}
+
+.extendednavigation__navigation-item.folder.selected span,
+.extendednavigation__navigation-item.folder.selected .selected {
+    color: @font-swatch6-color;
+    text-decoration: underline;
+}
+
+
+// Dropdown Menu
+// -------------
+.navigation-item.folder {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.navigation-item.folder .navigation__item-name {
+    color: @font-swatch4-color;
+	&:hover {
+		color: @font-swatch4-color;
+	}
+}
+
+.item-name--parent {
+
+	&:after {
+		font-family: 'FontAwesome', sans-serif;
+		display: inline-block;
+		margin-left: 0.8em;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		@media @tablet {
+			content: "";
+			font-size: 0.8em;
+		}
+		.navigation-item.open & {
+			@media @tablet {
+				-webkit-transform: rotate(90deg);
+				-moz-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+
+.navigation-list--children, .default-page .navigation-list--children {
+	background-color:@color-swatch1;
+	border: 1px solid @color-swatch7;
+    z-index: 99999;
+	.navigation__item-name {
+		color:@font-swatch9-color;
+	}
+	@media @tablet {
+		position: relative;
+		top: 0;
+		.navigation-item:hover & {
+			display: none;
+		}
+		.navigation-item.open & {
+			display: block;
+		}
+	}
+}
+
+
+// Burger Icon
+// -------------
+
+.navigation-toggle {
+    display: none;
+}
+
+@media @tablet {
+    .navigation-toggle {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 45px;
+        text-indent: 3000px;
+        line-height: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        outline: 0;
+        border: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch7;
+            box-shadow: 0 6px 0 @color-swatch7;
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 12px;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch7;
+            .transition( all, 0.5s, ease );
+        }
+    }
+    .navigation-toggle:hover {
+        border: 0;
+            &:before {
+                background: @color-swatch7;
+                box-shadow: 0 6px 0 @color-swatch7;
+            }
+            &:after {
+                background: @color-swatch7;
+            }
+    }
+    // Toggle Button Open State
+    .open & {
+        &.navigation-toggle {
+            background-color: @color-swatch3;
+            &:before {
+                margin-top: 21px;
+                background: @color-swatch7;
+                box-shadow: none;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                .transition( all, 0.5s, ease );
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 3px;
+                top: 0;
+                left: 50%;
+                right: 0;
+                margin-top: 21px;
+                margin-left: -13px;
+                background: @color-swatch7;
+                box-shadow: none;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                .transition( all, 0.5s, ease );
+            }
+        }
+    }
+    .navigation-body {
+        display: none;
+        .open & {
+            display: block;
+        }
+    }
+    .navigation-item {
+        width: 100%;
+    }
+}
+

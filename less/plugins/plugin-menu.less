@@ -1,0 +1,150 @@
+// -------------------------------------
+// Apparel: CSS > Plugin: Menu
+// -------------------------------------
+
+// Menu Navigation
+.widget__menusections {
+  text-align: center;
+  background-color: @color-swatch7;
+  padding: 15px;
+  &:before {
+    border: 8px solid #f2f2f2;
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
+
+.menusections-list {
+    margin: 10px 0;
+}
+
+.menusections-item:after {
+    content: "/";
+    font-size: 15px;
+    vertical-align: middle;
+    color: @color-swatch3;
+    margin-right: 0;
+    padding: 0 20px;
+    @media @mobile {
+        display:none;
+    }
+}
+
+.menusections-item:last-child:after {
+    display: none;
+}
+
+.menusections-item {
+    margin-right: 0;
+    @media @mobile {
+        display: block;
+        border-bottom: 1px dotted @color-swatch7;
+        padding: 10px 0px;
+    }
+}
+
+.menusections__item-name {
+    position: relative;
+    z-index: 9999;
+}
+
+.menu-items,
+.menu__section-body {
+    margin-bottom: 20px;
+}
+
+// Menu Content
+.widget__menu {
+	text-align:center;
+}
+
+.menu__item-header {
+    margin-top: 10px;
+}
+
+.menu-item {
+    display: block;
+}
+
+.item-content {
+    margin-top: 0;
+}
+
+.menu {
+    .section-header {
+        margin: 30px 0 0;
+        padding: 20px;
+        background-color: @color-swatch7;
+    }
+    .item-subtitle {
+        font-style: italic;
+        color: @color-swatch2;
+        font-size: @font-swatch5-font-size;
+    }
+    .dietary-item {
+        &:before {
+            content: "\f111";
+            font-size: 8px;
+            vertical-align: top;
+        }
+    }
+    .item-article {
+        background-color: @color-swatch7;
+        padding: 20px;
+    }
+    .section-subtitle {
+        font-size: @font-swatch4-font-size;
+        line-height: @font-swatch4-line-height;
+    }
+}
+
+.menu__section-header h2,
+.menu__section-footer p {
+    padding-bottom: 0;
+}
+
+.menu-section--subsection .menu__section-header {
+    background-color: transparent;
+}
+
+// Item Image
+.item-image {
+	background-color: darken(@color-swatch1,5%);
+}
+
+// Featured Section
+.menu-item--featured, 
+.menu-section--featured {
+    background-color: @color-swatch7;
+    position: relative;
+    padding: 40px;
+    z-index: 2;
+    &:before {
+        border: 8px solid @color-swatch1;
+        content: "";
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+// Section Footer
+.menu__section-footer {
+    text-align: center;
+    background-color: @color-swatch7;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid darken(@color-swatch1,5%);
+    p {
+        margin-bottom: 0;
+    }
+}

@@ -1,2 +1,4 @@
-# couture
-BaseKit Ecommerce Template
+Couture
+=========
+
+BaseKit eCommerce Template
