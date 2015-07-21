@@ -99,9 +99,11 @@
 // Navigation Link
 .navigation-item .item-name {
 	padding: 5px 15px;
-    color: transparent;
+    text-align: center;
     &:hover {
         -webkit-backface-visibility: hidden;
+        background-color: @color-swatch7;
+        color: @font-swatch6-color;
     }
 }
 
@@ -111,19 +113,21 @@
 
 // Selected Class
 .extendednavigation li.selected > a  {
-    color: @font-swatch6-color-hover;
+    color: @font-swatch6-color;
+    background-color: @color-swatch7;
     &:before {
-        color: @font-swatch6-color-hover;
+        color: @font-swatch6-color;
     }
 }
 
 .navigation-item.folder .navigation-item--child a {
     color: @font-swatch4-color;
+    background-color: @color-swatch7;
     &:before {
         color: @font-swatch4-color;
     }
     &:hover {
-        color: @font-swatch6-color-hover;
+        color: @font-swatch6-color;
     }
 }
 
