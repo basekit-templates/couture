@@ -451,6 +451,124 @@
     border: 0;
 }
 
+// -----------------------------
+// 4.  #Feature
+// -----------------------------
+
+
+// Feature Background (Image)
+// --------------------------
+
+.feature__background-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: table;
+    min-height: 500px;
+    height: 700px;
+    width: 100%;
+    @media @tablet {
+        min-height: 300px;
+        max-height: 500px;
+    }
+    @media @mobile {
+        min-height: 200px;
+        max-height: 400px;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+
+// Feature Content Wrap
+// --------------------
+
+.feature__content-wrap {
+    display: table-cell;
+    padding: 30px 40px;
+    text-align: left;
+    vertical-align: middle;
+    @media @tablet {
+        text-align: center;
+    }
+    @media @mobile {
+        padding: 30px 10px;
+    }
+}
+
+.feature__content-inner-wrap {
+    background: fade(@color-swatch7, 40%);
+}
+
+// Feature Content
+// ---------------
+
+// Feature Headline
+.feature__headline {
+    max-width: 65%;
+    @media @tablet {
+        font-size: bkscale(@font-swatch8-font-size,0.8);
+        line-height: bkscale(@font-swatch8-line-height,0.6);
+        max-width: 100%;
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch8-font-size,0.7);
+        line-height: bkscale(@font-swatch8-line-height,0.6);
+        max-width: 100%;
+    }
+}
+
+// Feature Strapline
+.feature__strapline {
+    max-width: 65%;
+    @media @tablet {
+        font-size: bkscale(@font-swatch9-font-size,0.9);
+        line-height: bkscale(@font-swatch9-line-height,0.8);
+        max-width: 100%;
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch9-font-size,0.8);
+        line-height: bkscale(@font-swatch9-line-height,0.7);
+        max-width: 100%;
+    }
+}
+
+
+// Feature Button
+// ---------------
+
+.feature__button { 
+    margin: 10px 0 0 0;
+    background-color: @color-swatch2;
+    &:after {
+        content:"\f054";
+        color: darken(@color-swatch2,10%);
+        padding: 0 0 0 10px;
+    }
+    &:hover {
+        background-color: darken(@color-swatch2,10%);
+        &:after {
+            color: lighten(@color-swatch2,10%);
+        }
+    } 
+}
+
+// Feature Paralax
+// ---------------
+
+.background-image {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.feature {
+  height: 100vh;
+  text-align: center;
+}
 
 
 // -----------------------------

@@ -3,36 +3,6 @@
 // -----------------------------
 
 
-// Transition
-// --------------
-
-/* Effect 15: scale down, reveal */
-.extendednavigation__item-name {
-    color: @font-swatch6-color;
-    font-weight: 700;
-    text-shadow: none;
-    text-rendering: optimizelegibility;
-}
-
-.extendednavigation__item-name::before {
-    color: @font-swatch6-color;
-    content: attr(data-hover);
-    position: absolute;
-    -webkit-transition: -webkit-transform 0.5s, opacity 0.3s;
-    -moz-transition: -moz-transform 0.5s, opacity 0.3s;
-    transition: transform 0.5s, opacity 0.3s;
-    text-rendering: optimizelegibility;
-}
-
-.extendednavigation__item-name:hover::before,
-.extendednavigation__item-name:focus::before {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    transform: scale(0.8);
-    opacity: 0;
-}
-
-
 // Navigation Bar
 // --------------
 
@@ -42,6 +12,63 @@
 
 .navigation-bar {
 	background-color: @color-swatch2;
+}
+
+.navigation-bar {
+    background-color: @color-swatch2;
+}
+
+.extendednavigation__navigation-body {
+    border-top: 1px solid darken(@color-swatch7,10%);
+}
+
+// Navigation Flexbox
+.navigation-list.extendednavigation__navigation-list.js-menu-list  {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.extendednavigation__navigation-item {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    min-width: 20%;
 }
 
 

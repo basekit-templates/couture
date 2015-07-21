@@ -5,65 +5,20 @@
 {% include "includes/header.twig" %}
 
 <div class="profile-header">
-    <div class="header-wrapper">
-        <div class="widgetcontent-left">
-            {{widget('content', 'widgetcontentleft', {content: '<p>Lorem ipsum dolor sit amet</p>'})|raw}}
-        </div>
-        <div class="widgetprofile-right">
-            {{widget('profile', 'headerprofilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
-        </div>
+    {{widget('extendednavigation', 'extendednavigation', { 'align': 'right'})|raw}}
+</div>
+
+<div class="feature-container">
+    <div class="feature-right-container">
+        {{widget('feature', 'feature-right', {
+            "header": "profile",
+            "strapline": "profile",
+            "defaultBgImg": asset('images/feature-bg.jpg'),
+            "positionTopPercentage": "50",
+            "showBtn": true,
+            "buttonText": "Lorem Ipsum"
+        })|raw}}
     </div>
-</div>
-
-<div class="homepage-slideshow">
-	{{widget('responsiveslideshow', 'slideshow', {
-	    'duration':'3',
-	    'transSpeed': '1000',
-	    'transType': 'fade',
-	    'showButtons': true,
-	    'showBullets': false,
-	    'allowPause': false,
-	    'allowLoop': true,
-	    'images':[
-	      {
-	        'imageHeight':'400',
-	        'imageWidth':'1000',
-	        'url':asset('/images/slideshow/slideshow-1.jpg'),
-            'title':'First slide title',
-            'description': 'First slide description'
-	      },
-	      {
-	        'imageHeight':'400',
-	        'imageWidth':'1000',
-	        'url':asset('/images/slideshow/slideshow-2.jpg'),
-            'title':'First slide title',
-            'description': 'First slide description'
-	      },
-	      {
-	        'imageHeight':'400',
-	        'imageWidth':'1000',
-	        'url':asset('/images/slideshow/slideshow-3.jpg'),
-            'title':'First slide title',
-            'description': 'First slide description'
-	      }
-	    ]
-	})|raw}}
-</div>
-
-<div class="logo-banner">
-   	<div class="header-wrapper">
-      	<div class="logo-banner-left">
-          	{{widget('content', 'logobannerleft1', {content: '<h1>Lorem ipsum dolor sit amet</h1>'})|raw}}
-          	{{widget('content', 'logobannerleft2', {content: '<h4>Lorem ipsum dolor sit amet</h4>'})|raw}}
-      	</div>
-      	<div class="logo-banner-center">
-      	    {{widget('logo', 'sitelogo', {"defaultlogo": asset('images/logo.png')})|raw}}
-      	</div>
-      	<div class="logo-banner-right">
-      	    {{widget('content', 'logobannerright1', {content: '<h1>Lorem ipsum dolor sit amet</h1>'})|raw}}
-      	    {{widget('content', 'logobannerright2', {content: '<h4>Lorem ipsum dolor sit amet</h4>'})|raw}}
-      	</div>
-   	</div>
 </div>
 
 <!-- Container -->
