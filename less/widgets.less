@@ -1,5 +1,5 @@
 // --------------------------------
-// Apparel: CSS > Widgets
+// Couture: CSS > Widgets
 // --------------------------------
 
 
@@ -133,9 +133,10 @@
         -webkit-order: 4;
         -ms-flex-order: 4;
         order: 4;
-        margin: 0;
+        margin-right: 0;
         width: 100%;
         border: 0;
+        text-align: center;
     }
 }
 
@@ -291,7 +292,7 @@
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:after {
-        border: 5px solid @color-swatch1;
+        border: 1px solid @color-swatch1;
         content: "";
         position: absolute;
         top: 10px;
@@ -451,16 +452,24 @@
     border: 0;
 }
 
+
+
+
 // -----------------------------
-// 4.  #Feature
+// 6.  #Feature
 // -----------------------------
 
 
 // Feature Background (Image)
 // --------------------------
 
-.bk-feature {
-    height: 700px;
+
+.background-image {
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.feature, .bk-feature {
     text-align: center;
 }
 
@@ -473,7 +482,6 @@
     -o-background-size: cover;
     background-size: cover;
     display: table;
-
     height: 700px;
     width: 100%;
     @media @tablet {
@@ -506,15 +514,13 @@
 }
 
 .feature__content-inner-wrap {
-    background: fade(@color-swatch7, 40%);
+    background: fade(@color-swatch3, 40%);
     margin: 0 auto;
     max-width: 50%;
-    padding: 30px;
-
+    padding: 80px;
     @media only screen and (max-width: 1024px) {
         max-width: 65%;
     }
-
     @media @tablet {
         max-width: 80%;
     }
@@ -523,8 +529,20 @@
 // Feature Content
 // ---------------
 
+
 // Feature Headline
 .feature__headline {
+    &:after {
+        border-top: 3px solid fade(@color-swatch1,20%);
+        content: "";
+        display: block;
+        position: relative;
+        margin: 15px auto 5px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 15%;
+        transform: skew(-40deg);
+    }
     @media @tablet {
         font-size: bkscale(@font-swatch8-font-size,0.8);
         line-height: bkscale(@font-swatch8-line-height,0.6);
@@ -571,7 +589,7 @@
 
 
 // -----------------------------
-// 6.  #Slideshow
+// 7.  #Slideshow
 // ----------------------------- 
 
 // Homepage Slideshow Height
@@ -719,14 +737,14 @@
 
 
 // -----------------------------
-// 7.  #Buttons
+// 8.  #Buttons
 // -----------------------------
 
-//  7.1  #STANDARD
+//  8.1  #STANDARD
 //  --------------
 
 
-//  7.2  #TWEET, PAYPAL, DROPBOX
+//  8.2  #TWEET, PAYPAL, DROPBOX
 //  --------------
 
 .tweet__button, 
@@ -754,7 +772,7 @@
     font-size: 18px;
 }
 
-//  7.3  #CLICK TO CALL
+//  8.3  #CLICK TO CALL
 //  --------------
 
 .widget__clicktocall {
@@ -789,7 +807,7 @@
     }
 
 
-//  7.4 #SLIDESHOW
+//  8.4 #SLIDESHOW
 //  --------------
 
 .responsiveslideshow__next-button, 
@@ -803,7 +821,7 @@
 
 
 // -----------------------------
-// 8.  #Contact Form
+// 9.  #Contact Form
 // -----------------------------
 
 // Body
@@ -846,7 +864,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 9.  #Signup Form
+// 10.  #Signup Form
 // -----------------------------
 
 .signupform__legend {
@@ -871,7 +889,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 10.  #Social Icons
+// 11.  #Social Icons
 // -----------------------------
 
 .social-list {
@@ -902,7 +920,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 11.  #Twitter Feed
+// 12.  #Twitter Feed
 // -----------------------------
 
 // Body
@@ -910,7 +928,7 @@ input.input[type=search],
     background-color: @color-swatch7;
     padding: 40px 40px 15px;
     &:after {
-        border: 8px solid @color-swatch1;
+        border: 1px solid @color-swatch1;
         content: "";
         position: absolute;
         top: 10px;
@@ -931,7 +949,6 @@ input.input[type=search],
     position: relative;
     z-index: 9999;
     padding: 10px;
-    text-align: center;
     @media @tablet {
         padding: 20px;
     }
@@ -948,7 +965,7 @@ input.input[type=search],
 }
 
 .twitter__tweet-wrap {
-    display: block;
+    display: inline-block;
     vertical-align: top;
     a {
         font-weight: @font-swatch1-font-weight;
@@ -974,7 +991,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 12.  #Divider (Keyline)
+// 13.  #Divider (Keyline)
 // -----------------------------
 
 // Add styles here...
@@ -983,7 +1000,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 13. #Profile
+// 14. #Profile
 // -----------------------------
 
 .template-footer {
@@ -1191,7 +1208,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 14. #Facebook
+// 15. #Facebook
 // -----------------------------
 
 .fb_iframe_widget_fluid span {
@@ -1202,7 +1219,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 15. Yelp
+// 16. Yelp
 // -----------------------------
 
 .yelpreview__review-list {
@@ -1223,7 +1240,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 16. #Map
+// 17. #Map
 // -----------------------------
 
 .bk-map.map.widget__map {
@@ -1234,7 +1251,7 @@ input.input[type=search],
 
 
 // -----------------------------
-// 17. #Hr Line
+// 18. #Hr Line
 // -----------------------------
 
 hr.rule {
