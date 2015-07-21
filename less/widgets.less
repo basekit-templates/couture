@@ -459,7 +459,13 @@
 // Feature Background (Image)
 // --------------------------
 
+.bk-feature {
+    height: 700px;
+    text-align: center;
+}
+
 .feature__background-image {
+    background-attatchment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
@@ -467,7 +473,7 @@
     -o-background-size: cover;
     background-size: cover;
     display: table;
-    min-height: 500px;
+
     height: 700px;
     width: 100%;
     @media @tablet {
@@ -490,7 +496,6 @@
 .feature__content-wrap {
     display: table-cell;
     padding: 30px 40px;
-    text-align: left;
     vertical-align: middle;
     @media @tablet {
         text-align: center;
@@ -501,7 +506,18 @@
 }
 
 .feature__content-inner-wrap {
-        background: fade(@color-swatch7, 40%);
+    background: fade(@color-swatch7, 40%);
+    margin: 0 auto;
+    max-width: 50%;
+    padding: 30px;
+
+    @media only screen and (max-width: 1024px) {
+        max-width: 65%;
+    }
+
+    @media @tablet {
+        max-width: 80%;
+    }
 }
 
 // Feature Content
@@ -509,31 +525,25 @@
 
 // Feature Headline
 .feature__headline {
-    max-width: 65%;
     @media @tablet {
         font-size: bkscale(@font-swatch8-font-size,0.8);
         line-height: bkscale(@font-swatch8-line-height,0.6);
-        max-width: 100%;
     }
     @media @mobile {
         font-size: bkscale(@font-swatch8-font-size,0.7);
         line-height: bkscale(@font-swatch8-line-height,0.6);
-        max-width: 100%;
     }
 }
 
 // Feature Strapline
 .feature__strapline {
-    max-width: 65%;
     @media @tablet {
         font-size: bkscale(@font-swatch9-font-size,0.9);
         line-height: bkscale(@font-swatch9-line-height,0.8);
-        max-width: 100%;
     }
     @media @mobile {
         font-size: bkscale(@font-swatch9-font-size,0.8);
         line-height: bkscale(@font-swatch9-line-height,0.7);
-        max-width: 100%;
     }
 }
 
@@ -557,17 +567,7 @@
     } 
 }
 
-// Feature Paralax
-// ---------------
 
-.background-image {
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.feature {
-  text-align: center;
-}
 
 
 // -----------------------------
