@@ -90,6 +90,7 @@
 // ---------------
 
 .navigation-item {
+    position: initial;
 	@media @tablet {
 		width: 100%;
 	}
@@ -120,17 +121,6 @@
     }
 }
 
-.navigation-item.folder .navigation-item--child a {
-    color: @font-swatch4-color;
-    background-color: @color-swatch7;
-    &:before {
-        color: @font-swatch4-color;
-    }
-    &:hover {
-        color: @font-swatch6-color;
-    }
-}
-
 .extendednavigation__navigation-item.folder.selected span,
 .extendednavigation__navigation-item.folder.selected .selected {
     color: @font-swatch6-color;
@@ -142,6 +132,55 @@
 // -------------
 .navigation-item.folder {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    .navigation-list {
+        background-color: @color-swatch3;
+        border: none;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        position: absolute;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all, 0.5s, ease-in-out;
+    }
+
+    &:hover .navigation-list {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navigation-item {
+        background-color: transparent;
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        min-width: 10%;
+        flex-grow: 0;
+        text-align: center;
+    }
+
+    span.item-name {
+        color: @font-swatch6-color;
+    }
+
+    span.item-name:after {
+        border-top-color: @font-swatch6-color;
+    }
+
+    .item-name {
+        background-color: transparent;
+        color: @font-swatch7-color;
+    }
 }
 
 .navigation-item.folder .navigation__item-name {
