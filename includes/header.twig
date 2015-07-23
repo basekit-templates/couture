@@ -1,8 +1,7 @@
 <!-- Header -->
 <header class="template-header">
     <div class="header-wrapper">
-        <div class="headercontent-wrapper">
-            <div class="header-companyname clearfix">
+            <div class="header-search">
                 <div class="flex-item flex-product-search">
                     <form class="form  ecomproductslist__form js-productlist-display-form" method="GET" action="/store">
                         <div class="form-body">
@@ -16,15 +15,13 @@
                     </form>
                 </div>
             </div>
-            <div class="header-extendednavigation">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            <div class="header-companyname">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
             </div>
-        </div>
-        <div class="header-basket">
-            {{widget('ecombasket', 'shopbasket', {})|raw}}
+            <div class="header-basket">
+                {{widget('ecombasket', 'shopbasket', {})|raw}}
+            </div>
         </div>
     </div>
 </header>
-
-<!-- End Header -->

@@ -1,5 +1,5 @@
 // ---------------------------------
-// Apparel: CSS > Template Theme
+// Couture: CSS > Template Theme
 // ---------------------------------
 
 // 1. #HEADER, PROFILE HEADER & FOOTER
@@ -261,7 +261,11 @@ textarea,
 input.input[type=email]:focus, 
 input.input[type=search]:focus, 
 .contact-form__textarea:focus {
-    border: 1px solid darken(@color-swatch7,8%)!important;
+    border: 1px solid darken(@color-swatch7,8%);
+}
+
+.template-header input.input[type=search]:focus {
+    border-bottom: 1px solid darken(@color-swatch7,8%)!important;
 }
 
 .signupform__label, 

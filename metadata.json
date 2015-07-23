@@ -1,7 +1,7 @@
 {
-    "name":"Apparel",
-    "thumbnail":"apparel.png",
-    "screenshot":"apparel-screenshot.jpg",
+    "name":"Couture",
+    "thumbnail":"couture.png",
+    "screenshot":"couture-screenshot.jpg",
     "tags": {
         "en": ["shopping", "ecommerce", "business", "store", "boutique", "professional", "minimal", "clean", "simple"],
         "es": ["compras", "ecommerce", "negocios", "tienda", "boutique", "profesional", "minimalista", "limpio", "simple"],
@@ -11,9 +11,6 @@
     "templateType":"ecommerce",
     "widgetVersion":2,
     "images":[
-        "images/slideshow/slideshow-1.jpg",
-        "images/slideshow/slideshow-2.jpg",
-        "images/slideshow/slideshow-3.jpg",
         "images/logo.png",
         "images/image-1.jpg"
     ],
