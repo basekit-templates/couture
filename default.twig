@@ -4,36 +4,39 @@
 
 {% include "includes/header.twig" %}
 
-<div class="template-title-wrap">
-    <div class="template-title">
-    	{{widget('logo', 'sitelogo', {"defaultlogo": asset('images/logo.png')})|raw}}
-        <h1 style="padding-bottom: 0;">
-            <span>{{ page.title }}</span>
-        </h1>
-    </div>
-</div>
-
 <div class="bk-pt-default">
-	
-	<!-- Container -->
-	<div class="container">
-	
-		<!-- Page Content -->
-		<section class="template-content">
-	
-			<!-- Template Widgets -->
-			
-			<!-- End Template Widgets -->
-	
-			<!-- Main Widet Zone -->
-		   	{{zone('main')|raw}}
-	
-		</section>
-		<!-- End Page Content -->
-	
-	</div>
-	<!-- End Container -->
 
+    <div class="profile-header">
+        {{widget('extendednavigation', 'extendednavigation', { 'align': 'right'})|raw}}
+    </div>
+    
+    <div class="template-title-wrap">
+        <div class="template-title">
+            <h1 style="padding-bottom: 0;">
+                <span>{{ page.title }}</span>
+            </h1>
+        </div>
+    </div>
+    	
+    	<!-- Container -->
+    	<div class="container">
+    	
+    		<!-- Page Content -->
+    		<section class="template-content">
+    	
+    			<!-- Template Widgets -->
+    			
+    			<!-- End Template Widgets -->
+    	
+    			<!-- Main Widet Zone -->
+    		   	{{zone('main')|raw}}
+    	
+    		</section>
+    		<!-- End Page Content -->
+    	
+        </div>
+        <!-- End Container -->
+    
 </div>
 <!-- End bk-pt-default -->
 

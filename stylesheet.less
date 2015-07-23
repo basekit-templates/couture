@@ -108,8 +108,24 @@ body {
     width: 100%;
     text-align: center;
     padding: 20px;
-    background-color: @color-swatch7;
+    background-color: transparent;
+    margin-top: 40px;
 }
+
+.template-title h1 {
+    &:after {
+        border-top: 3px solid fade(@color-swatch3,20%);
+        content: "";
+        display: block;
+        position: relative;
+        margin: 25px auto 5px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 5%;
+        transform: skew(-40deg);
+    }
+}
+
 
 
 // Header
