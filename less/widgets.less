@@ -786,12 +786,19 @@
     width: 20%;
     background-color: @color-swatch3;
     color: @font-swatch7-color;
+    @media @tablet {
+        width: 100%;
+        float: initial;
+    }
 }
 
 .contactform__input, .contactform__textarea {
     float: left;
     display: inline-block;
     width: 80%!important;
+    @media @tablet {
+        width: 100%!important;
+    }
 }
 
 .contactform__input {
@@ -804,6 +811,9 @@
 
 .label--message.contactform__label {
       padding: 36px 0;
+      @media @tablet {
+        padding: 12px 0;
+      }
 }
 
 // Body
@@ -816,8 +826,8 @@
     display: table;
     width: 70%;
     text-align: center;
-    @media @mobile {
-        width: 80%;
+    @media @tablet {
+        width: 100%;
     }
 }
 
@@ -882,23 +892,37 @@ input.input[type=search],
     margin-bottom: 10px;
 }
 
+.socialicons__social-item a {
+    border-bottom: 3px solid @color-swatch1;
+}
+
 .socialicons__social-item a:hover {
     text-decoration: none;
+    border-bottom: 3px solid @color-swatch3;
+    padding-bottom: 10px;
+    color: @color-swatch1;
 }
 
 .socialicons__social-link {
     padding: 17px 20px;
-    border: 1px solid @color-swatch4;
-    padding: 10px;
+    padding: 10px 5px 10px 10px;
     display: inline-block;
-        color: @font-swatch4-color;
+    color: @font-swatch4-color;
 }
 
 .social-social-link {
     color: @color-swatch4;
 }
 
+.social-name {
+    display: none;
+}
 
+.widget__socialicons {
+    .icon--twitter:before, .icon--facebook:before, .icon--googleplus:before {
+        margin-right: 5px;
+    }
+}
 
 
 // -----------------------------
@@ -929,12 +953,7 @@ input.input[type=search],
 
 // Content
 .twitter__avatar {
-    display: inline-block;
-    margin-right: 20px;
-    @media @mobile {
-        margin: 0px auto 20px;
-        display:table;
-    }
+    display: none;
 }
 
 .twitter__tweet-wrap {
@@ -953,13 +972,22 @@ input.input[type=search],
     border-bottom: 1px solid @color-swatch1;
     padding: 0 0 30px 0;
     margin: 0 0 30px 0;
-    &:after {
+    @media @tablet {
+        text-align: center;
+    }
+    &:before {
         content: "\f099";
         font-family: 'FontAwesome', sans-serif;
-        color: @color-swatch3;
+        color: #00aced;
         float: left;
-        padding: 30px;
+        padding: 10px 20px;
         font-size: 30px;
+        margin-right: 20px;
+        padding: 40px 20px;
+        @media @tablet {
+            width: 100%;
+            text-align: center;
+        }
     }
     &:last-child {
         border-bottom:0;
@@ -995,10 +1023,6 @@ input.input[type=search],
         @media @mobile {
             min-width: 280px;
         }
-    }
-    .twitter__avatar {
-        margin: 0px auto 10px;
-        display: table;
     }
     .signupform__input {
         width: 100%;
@@ -1075,15 +1099,6 @@ input.input[type=search],
     .companyaddress__address-line {
         float: left; 
         margin-right: 10px;
-    }
-    .twitter__avatar {
-        float: right;
-        margin-left: 20px;
-        @media @tablet {
-            display: block;
-            float: initial;
-            margin-left: 0;
-        }
     }
     .twitter__tweet-wrap {
         padding-right: 90px;

@@ -2,7 +2,10 @@
 // Apparel: CSS > Plugin: Blog
 // -------------------------------------
 
-// Blog Search
+// -----------------------------
+// #Blogpost
+// -----------------------------
+
 .blogsearch__fieldset {
     margin: 0px auto 10px;
     display: table;
@@ -21,7 +24,12 @@
     display: none;
 }
 
-// Blog Post List
+
+
+
+// -----------------------------
+// #Blogpostlist
+// -----------------------------
 
 // Blog Post List in 2 columns
 .responsivecolumns .columns-two-left, 
@@ -81,26 +89,21 @@
     margin: 0px auto;
 }
 
-.blogpostlist__post-content,
-.blogpostlist__post-footer {
-    text-align: center;
-}
-
 .blogpostlist .post-article {
-    background-color: @color-swatch7;
     position: relative;
     padding: 20px 40px;
     z-index: 2;
-    &:after {
-        border: 8px solid @color-swatch1;
-        content: "";
-        position: absolute;
-        top: 10px;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
+    &:before {
+        content: "\f1ea";
+        font-family: 'FontAwesome', sans-serif;
+        color: #305286;
+        float: left;
+        font-size: 30px;
+        margin-right: 20px;
+        margin-right: 20px;
+        padding-right: 20px;
     }
-	@media @tablet {
+    @media @tablet {
 		padding: 40px 30px 30px 20px;
 	}
 }
@@ -126,8 +129,7 @@
 }
 
 .blogpostlist__post-image {
-    display: inline-block;
-    width: 50%;
+    display: none;
     @media @tablet {
         float: initial;
         width: 100%;
@@ -135,7 +137,7 @@
 }
 
 .blogpostlist__post-content {
-    width: 50%;
+    width: 90%;
     display: inline-block;
     @media @tablet {
         float: initial;
@@ -250,7 +252,7 @@ hr {
 }
 
 .post-image + .post-content + .blogpostlist__post-footer {
-    padding-left: 50%;
+    padding-left: 9%;
     width: 100%;
     @media @tablet {
         width: initial;
@@ -272,8 +274,7 @@ hr {
     max-width: 700px;
 }
 
-.post-body.blogpost__post-body,
-.blogpostlist__post-excerpt {
+.post-body.blogpost__post-body {
     margin: 0 auto;
     margin-bottom: 20px;
 }
@@ -293,7 +294,12 @@ hr {
     vertical-align: top;
 }
 
-// Blog Post
+
+
+
+// -----------------------------
+// #Blogpost
+// -----------------------------
 
 .blogpost__post-header {
     text-align: center;

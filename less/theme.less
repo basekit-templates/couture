@@ -208,6 +208,13 @@ legend {
 	}
 }
 
+// Label
+// ----------
+
+label {
+    margin: 0;
+}
+
 // Select
 // ----------
 
@@ -237,22 +244,22 @@ input[type="email"],
 input[type="password"],
 textarea,
 .input--single-line {
-    border: 1px solid darken(@color-swatch7,8%);
+    border: 1px solid @color-swatch1;
     -webkit-appearance: none;
     background-color: @color-swatch1;
     border-radius: 0;
     &:focus {
-        border-bottom: 1px solid darken(@color-swatch7,8%);
+        border: 1px solid @color-swatch3;
         box-shadow: none;
         outline: none;
-        border: 0!important;
     }
 }
 
 input.input[type=email]:focus, 
 input.input[type=search]:focus, 
 .contact-form__textarea:focus {
-    border: 1px solid darken(@color-swatch7,8%);
+    border: 1px solid @color-swatch3!important;
+    border-color: @color-swatch3!important;
 }
 
 .template-header input.input[type=search]:focus {
