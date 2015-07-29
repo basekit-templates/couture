@@ -8,33 +8,26 @@
     {{widget('extendednavigation', 'extendednavigation', { 'align': 'right'})|raw}}
 </div>
 
-<div class="feature-container">
-    <div class="feature-right-container">
-        {{widget('feature', 'feature-right', {
-            "header": "profile",
-            "strapline": "profile",
-            "defaultBgImg": asset('images/feature-bg.jpg'),
-            "positionTopPercentage": "50",
-            "showBtn": true,
-            "buttonText": "Lorem Ipsum"
-        })|raw}}
+    <div class="feature-container">
+        <div class="feature-right-container">
+            {{widget('feature', 'feature-right', {
+                "header": "profile",
+                "strapline": "profile",
+                "defaultBgImg": asset('images/feature-bg.jpg'),
+                "positionTopPercentage": "50",
+                "showBtn": true,
+                "buttonText": "Lorem Ipsum"
+            })|raw}}
+        </div>
     </div>
-</div>
 
-<!-- Container -->
-<div class="container">
-
-	<!-- Page Content -->
-	<section class="template-content">
-
-		<!-- Main Widet Zone -->
-	   	{{zone('main')|raw}}
-
-	</section>
-	<!-- End Page Content -->
-
-</div>
-<!-- End Container -->
+    <!-- Page Content -->
+    <section class="template-content container">
+    	<!-- Main Widet Zone -->
+       	{{zone('main')|raw}}
+    
+    </section>
+    <!-- End Page Content -->
 
 {% include "includes/footer.twig" %}
 

@@ -9,19 +9,48 @@
 .blogsearch__fieldset {
     margin: 0px auto 10px;
     display: table;
-    width: 70%;
+    width: 100%;
     text-align: center;
-    @media @mobile {
-        width: 80%;
-    }
+    padding: 0 2%;
 }
 
 .blogsearch__form-body {
     margin: 20px 0px 20px;
 }
 
+.blogsearch__legend {
+    margin-bottom: 10px;
+    &:after {
+        border-top: 3px solid @color-swatch4;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 15px auto 5px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 13%;
+        transform: skew(-40deg);
+    }
+}
+
 .blogsearch__label {
-    display: none;
+    display: inline-block;
+    float: left;
+    width: 15%;
+    background-color: @color-swatch3;
+    padding: 10px;
+    color: @font-swatch7-color;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+.blogsearch__input {
+    width: 85%!important;
+    height: 48px;
+    @media @tablet {
+        width: 100%!important;
+    }
 }
 
 
@@ -76,7 +105,7 @@
 }
 
 .post-content {
-	margin: 20px 0 20px;
+	margin: 30px 0 20px;
 }
 
 .blog-search__input {
@@ -91,8 +120,9 @@
 
 .blogpostlist .post-article {
     position: relative;
-    padding: 20px 40px;
+    padding: 20px 40px 40px;
     z-index: 2;
+    border-bottom: 1px solid @color-swatch7;
     &:before {
         content: "\f1ea";
         font-family: 'FontAwesome', sans-serif;
@@ -100,12 +130,20 @@
         float: left;
         font-size: 30px;
         margin-right: 20px;
-        margin-right: 20px;
         padding-right: 20px;
+        @media @tablet {
+            margin-right: 0;
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
     }
     @media @tablet {
 		padding: 40px 30px 30px 20px;
 	}
+}
+
+.post-article:last-child {
+    border-bottom: 0;
 }
 
 .blogpostlist__post-excerpt--full {
@@ -234,6 +272,18 @@ hr {
     align-self: auto;
 }
 
+// Blog Post List Pagination
+.blogpostlist__pagination-item:nth-child(1) {
+    float: left;
+    display: inline-block;
+}
+
+.blogpostlist__pagination-item:nth-child(2) {
+    float: right;
+    display: inline-block;
+}
+
+
 
 // Blog Post List Footer
 .blogpostlist__post-footer {
@@ -275,7 +325,6 @@ hr {
 }
 
 .post-body.blogpost__post-body {
-    margin: 0 auto;
     margin-bottom: 20px;
 }
 
@@ -301,25 +350,11 @@ hr {
 // #Blogpost
 // -----------------------------
 
-.blogpost__post-header {
-    text-align: center;
-}
-
 .blogpost__post-article {
-    background-color: @color-swatch7;
+    background-color: @color-swatch1;
     position: relative;
-    padding: 10px;
     z-index: 2;
-    padding: 40px 40px 20px 40px;
-    &:after {
-        border: 8px solid @color-swatch1;
-        content: "";
-        position: absolute;
-        top: 10px;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-    }
+    padding: 0;
 }
 
 hr {
@@ -344,15 +379,49 @@ hr {
     max-height: 700px;
 }
 
-// Blog Post List Footer
-.blogpost__post-footer {
-	border: 1px solid @color-swatch7;
-	padding: 0 20px 30px;
-	text-align: center;
+.blogpost__post-content {
+    width: 73%;
+    float: right;
+    @media @tablet {
+        width: 100%;
+        float: initial;
+    }
 }
 
-.blogpost__sharing-links {
-    margin-top: 15px;
+.blogpost__post-attributes {
+    border-top: 1px solid @color-swatch7;
+    border-bottom: 1px solid @color-swatch7;
+    padding: 10px 0px;
+    margin: 20px 0 0px;
+}
+
+.blogpost__post-category {
+    margin-bottom: 5px;
+}
+
+// Blog Post List Footer
+.blogpost__post-footer {
+	text-align: center;
+    float: left;
+    width: 25%;
+    text-align: left;
+    margin: 3% 2% 2% 0;
+    @media @tablet {
+        width: 100%;
+        margin: 0;
+        float: initial;
+    }
+}
+
+.blogpost__post-footer .timestamp {
+    display: inline-block;
+    margin: 10px 0;
+    background-color: @color-swatch3;
+    padding: 20px;
+    color: @font-swatch7-color;
+    @media @tablet {
+        margin: 0 0 10px 0;
+    }
 }
 
 .icon--twitter:before, 
@@ -363,8 +432,14 @@ hr {
 
 // Blog Post Buttons
 .blogpost__button {
-    padding: 8px 20px;
+    padding: 5px 0 0;
     min-width: 220px;
+    background-color: @font-swatch7-color;
+    color: @font-swatch5-color;
+    text-align: left;
+    &:hover {
+        background-color: transparent;
+    }
     @media @mobile {
         min-width: 100%;
         width: 100%;

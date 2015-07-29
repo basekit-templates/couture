@@ -177,7 +177,7 @@
 .gallery {
     .gallery-item {
         position: relative;
-        width: 49%;
+        width: 32.5%;
         margin-bottom: 15px;
         .image-title {
             font-family:@font-swatch9-font-family;
@@ -423,6 +423,7 @@
 
 .feature, .bk-feature {
     text-align: center;
+    overflow: hidden;
 }
 
 .feature__background-image {
@@ -861,23 +862,66 @@ input.input[type=search],
 
 .signupform__legend {
     padding: 0;
+    text-align: center;
+    font-size: @font-swatch3-font-size;
+    margin-bottom: 20px;
+        &:after {
+        border-top: 3px solid @color-swatch3;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 15px auto 5px;
+        min-width: 30px;
+        max-width: 200px;
+        width: 7%;
+        transform: skew(-40deg);
+    }
 }
 
 .signupform__form-body {
     margin: 0px auto 10px;
     display: table;
-    width: 70%;
+    width: 100%;
     text-align: center;
-    @media @mobile {
-        width: 80%;
+    padding: 0 2%;
+}
+
+.signupform__label {
+    float: left;
+    display: inline-block;
+    background-color: @color-swatch3;
+    color: @font-swatch7-color;
+    font-size: @font-swatch7-font-size!important;
+    padding: 10px;
+    width: 20%;
+    @media @tablet {
+        width: 100%;
     }
 }
 
 .signupform__input {
-    float: initial;
+    float: left;
+    display: inline-block;
+    width: 80%!important;
+    height: 48px;
+    @media @tablet {
+        width: 100%!important;
+    }
 }
 
+.signupform__form-group:nth-child(1) {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+}
 
+.signupform__form-group:nth-child(2) {
+    width: 20%;
+    margin: 0px auto;
+    @media @tablet {
+        width: 100%;
+    }
+}
 
 
 // -----------------------------
@@ -959,6 +1003,7 @@ input.input[type=search],
 .twitter__tweet-wrap {
     display: inline-block;
     vertical-align: top;
+    width: 90%;
     a {
         font-weight: @font-swatch1-font-weight;
         word-wrap: break-word;
@@ -983,10 +1028,12 @@ input.input[type=search],
         padding: 10px 20px;
         font-size: 30px;
         margin-right: 20px;
-        padding: 40px 20px;
+        padding: 30px 20px;
         @media @tablet {
             width: 100%;
             text-align: center;
+            padding: 0;
+            margin-bottom: 10px;
         }
     }
     &:last-child {
@@ -1012,193 +1059,72 @@ input.input[type=search],
 // 14. #Profile
 // -----------------------------
 
-.template-footer {
-    .twitter {
-        background-color: transparent;
-        border: 0;
-        padding: 10px 30px 0px;
-    }
-    .map__embed-wrap {
-        min-width: 400px;
-        @media @mobile {
-            min-width: 280px;
-        }
-    }
-    .signupform__input {
-        width: 100%;
-        text-align: center;
-    }
-    .signupform__label {
-        padding: 0;
-        color: @font-swatch4-color;
-        font-size: @font-swatch3-font-size;
-        &:after {
-            margin: 10px auto 10px;
-        }
-    }
-    .signupform__form-body {
-        margin: 20px auto 0px;
-        @media @mobile {
-            margin: 20px auto 10px;
-        }
-    }
-    .signupform__form {
-        padding: 0;
-        &:after {
-            display: none;
-        }
-    }
-    .profile__signupform {
-        width: 400px;
-        margin: 0px auto;
+//  #footer Profile Widgets
+//  ------------------------
+
+.template-footer2 .twitter__avatar {
+    display: inline-block;
+    margin-left: 20px;
+    float: right;
+    @media @mobile {
         display: table;
-        @media @tablet {
-            margin: 10px 0;
-        }
-        @media @mobile {
-            min-width: 250px;
-            max-width: 280px;
-            margin: 0px auto;
-        }
-    }
-    .socialicons__social-item a:hover {
-        border: 0;
-    }
-    .socialicons__social-item:hover {
-        transform: initial;
-    }
-    input.input[type=email], 
-    input.input[type=search], 
-    .contact-form__textarea {
-        color: @font-swatch5-color;
-    }
-    .twitter__tweet-meta {
-        font-size: 13px;
+        margin: 0px auto 20px;
+        float: initial;
     }
 }
 
+.template-footer2 .profile__companystrapline {
+    margin-bottom: 10px;
+}
 
-//  Widget Profile Header Right
-//  ---------------------------
+.template-footer2 .signupform__form-group {
+    margin-bottom: 0;
+}
 
-.widgetprofile-right {
-    text-align: right;
-    padding-top: 10px;
-    .clearfix;
-    @media @tablet {
+.template-footer2 .signupform__input {
+    display: inline-block;
+    float: left; 
+    width: 70%;
+}
+
+.template-footer2 .button--submit {
+    width: 30%;
+    display: inline-block;
+    padding: 8px 8px 7px 8px;
+}
+
+.template-footer2 .signupform__form {
+    padding: 20px 0 20px;
+    margin-bottom: 20px;
+}
+
+.template-footer2 .map__embed-wrap {
+    margin-bottom: 20px;
+}
+
+.template-footer2 .signupform__legend {
+    display: none;
+}
+
+.template-footer2 .signupform__form-body {
+    margin: 0 30px 0;
+}
+
+.template-footer2 .map__embed-wrap {
+    min-width: 300px;
+}
+
+.template-footer2 .profile__signupform {
+    @media @mobile {
         text-align: center;
     }
-    .companyaddress__address {
-        float: right;
-        @media @tablet {
-            float: none;
-            margin: 0px auto;
-            display: table;
-        }
+}
+
+.template-footer2 .signupform__form {
+    @media @mobile {
+        padding: 20px 0 10px;
     }
-    .companyaddress__address-line {
-        float: left; 
-        margin-right: 10px;
-    }
-    .twitter__tweet-wrap {
-        padding-right: 90px;
-        @media @tablet {
-            padding-right: 0;
-        }
-    }
-    .twitter__tweet-item {
-        max-width: 50%;
-        float: right;
-        @media @tablet {
-            float: initial;
-            max-width: 100%;
-        }
-    }
-    .signupform__form {
-        padding: 0;
-        &:after {
-            display: none;
-        }
-    }
-    .signupform__input {
-        width: 100%;
-        text-align: center;
-    }
-    .signupform__label {
-        display: none;
-        &:after {
-            margin: 10px auto 10px;
-        }
-    }
-    .signupform__form-body {
-        display: table;
-        width: 80%;
-        z-index: 1;
-        @media @mobile {
-            margin: 20px auto 10px;
-        }
-    }
-    .profile__signupform {
-        width: 400px;
-        margin: 10px auto 0;
-        display: block;
-        float: right;
-        @media @tablet {
-            float: initial;
-        }
-        @media @mobile {
-            min-width: 250px;
-            max-width: 280px;
-            margin: 0px auto;
-        }
-    }
-    .signupform__input {
-        width: 100%;
-        float: left;
-        display: inline-block;
-        text-align: left;
-    }
-    .signupform__button {
-        padding: 2px 40px;
-        width: 100%;
-        float: right;
-    }
-    .signupform__form-group {
-        margin-bottom: 0;
-        display: inline-block;
-    }
-    .signupform__legend {
-        text-align: left;
-        display: inline-block;
-        width: 15%;
-        float: left;
-        @media @tablet {
-            text-align: center;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-    }
-    .profile__map {
-        margin-bottom: 10px;
-    }
-    .profile__emailaddress,
-    .profile__companyphone,
-    .profile__companystrapline {
-        margin-top: -10px;
-    }
-    .socialicons__social-name {
-        display: none;
-    }
-    .socialicons__social-list {
-        @media @tablet {
-            margin: 0px auto;
-            display: table;
-        }
-    }
-    .profile__companyaddress {
-        .clearfix;
-    }
-} 
+}
 
 
 

@@ -37,24 +37,45 @@
 // ------
 
 .template-footer {
-	min-height: 100px;
-	background-color: @color-swatch3;
-	text-align: center;
-	color: @font-swatch9-color;
-	// Change heading elements to white
-	h1, h2, h3, h4 {
-		color: @font-swatch9-color;
-	}
-	// Lighten paragraph & link elements
-	p, a {
-		color: @font-swatch9-color;
-		padding: 0;
-	}
-	// Reset Twitter feed styles
-	.twitter-feed {
-		padding: 0;
-		background-color: transparent;
-	}
+    min-height: 60px;
+    background-color: darken(@color-swatch4,5%);
+    text-align: center;
+    color: @font-swatch8-color;
+    padding: 15px 20px 0 20px;
+    @media @mobile {
+        min-height: 100px;
+        padding: 15px 20px 20px 20px;
+    }
+    // Change heading elements to white
+    h1, h2, h3, h4 {
+        color: @font-swatch8-color;
+    }
+    // Lighten paragraph & link elements
+    p, a {
+        color: @font-swatch8-color;
+    }
+    // Reset Twitter feed styles
+    .twitter-feed {
+        padding: 0;
+        background-color: transparent;
+    }
+    .left {
+        float: left;
+        text-align: left;
+    }
+    .right {
+        float: right;
+        text-align: right;
+    }
+    .left,
+    .right {
+        display: inline-block;
+        width: 100%;
+        @media @mobile {
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 
 
@@ -232,10 +253,6 @@ select {
 	}
 }
 
-.signupform__legend {
-    display: none;
-}
-
 // Inputs: Text
 // ------------
 
@@ -271,17 +288,24 @@ input.input[type=search]:focus,
 .blogsearch__legend {
     border-bottom: 0;
     text-align: center;
-    font-size: @font-swatch1-font-size;
-    font-weight: @font-swatch1-font-weight;
+    font-size: @font-swatch3-font-size;
+    font-weight: @font-swatch3-font-weight;
     padding: 30px 0 0;
 }
 
 .contactform__legend {
     margin-bottom: 10px;
-}
-
-.signupform__label {
-   padding: 30px 0 10px;
+    &:after {
+        border-top: 3px solid @color-swatch4;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 15px auto 5px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 16%;
+        transform: skew(-40deg);
+    }
 }
 
 .signupform__input {
@@ -311,15 +335,9 @@ input.input[type=search]:focus,
 button, 
 .button,
 .blogpostlist__read-more {
-    padding: 8px 50px;
+    padding: 8px 30px;
     background-color: @color-swatch3;
     color: @font-swatch7-color;
-    .transition (all,0.1s, ease-in-out);
-
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
 }
 
 

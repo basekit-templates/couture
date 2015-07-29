@@ -294,33 +294,6 @@ if(publishedmode==true) {
 
 
 
-
-
-
-// ---------------------------------
-// Search Overlay
-// ---------------------------------
-
-if(publishedmode==true) {
-
-    // Overlay opens
-
-    $( ".search-toggle" ).click(function() {
-        $( "body, html" ).addClass( "search--open" );
-    });
-
-    // Overlay closes
-
-    $('.search-overlay').click(function(e) {
-        if (e.target == this) {
-             closeEverything();
-        }
-    });
-}
-
-
-
-
 // On ESC key
 
 document.onkeydown = function(evt) {
@@ -329,22 +302,6 @@ document.onkeydown = function(evt) {
         closeEverything();
     }
 };
-
-
-
-// -------------------------------------------------------
-// Ecom Search Toggle
-// Reveal search form when search was perfomed on the page
-// -------------------------------------------------------
-
-
-function ecomProductsListSearchHandler() {
-
-    if( $("input#page-zones__main-widgets__productslist__ecomproductslist__search").val() == "" ) {
-         $("body").addClass("product--search-active");
-    }
-
-}
 
 
 
@@ -360,7 +317,6 @@ $(document).ready(function() {
     ecomProductClickable();
     ecomproductSlider();
     ecomProductOneImage();
-    ecomProductsListSearchHandler();
 
 }); // Document Ready
 

@@ -4,18 +4,9 @@
 
 // Menu Navigation
 .widget__menusections {
-  text-align: center;
-  background-color: @color-swatch7;
-  padding: 15px;
-  &:before {
-    border: 8px solid #f2f2f2;
-    content: "";
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-  }
+    text-align: center;
+    background-color: @color-swatch7;
+    padding: 15px;
 }
 
 .menusections-list {
@@ -76,9 +67,7 @@
 
 .menu {
     .section-header {
-        margin: 30px 0 0;
-        padding: 20px;
-        background-color: @color-swatch7;
+        margin: 30px 0;
     }
     .item-subtitle {
         font-style: italic;
@@ -91,10 +80,6 @@
             font-size: 8px;
             vertical-align: top;
         }
-    }
-    .item-article {
-        background-color: @color-swatch7;
-        padding: 20px;
     }
     .section-subtitle {
         font-size: @font-swatch4-font-size;
@@ -111,9 +96,27 @@
     background-color: transparent;
 }
 
+.menu__item-description {
+    &:after {
+        border-top: 3px solid @color-swatch4;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 10px auto 20px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 15%;
+        transform: skew(-40deg);
+    }
+}
+
 // Item Image
-.item-image {
-	background-color: darken(@color-swatch1,5%);
+.menu .item-image .image-link {
+	background-color: @color-swatch1;
+}
+
+.menu-item--featured .image-link {
+    background-color: @color-swatch7!important;
 }
 
 // Featured Section
@@ -123,15 +126,6 @@
     position: relative;
     padding: 40px;
     z-index: 2;
-    &:before {
-        border: 8px solid @color-swatch1;
-        content: "";
-        position: absolute;
-        top: 10px;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-    }
     @media @mobile {
         padding: 20px;
     }
