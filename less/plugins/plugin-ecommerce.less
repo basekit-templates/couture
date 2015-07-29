@@ -10,6 +10,14 @@
 
 @import "@{templateLocal}/less/plugins/ecommerce/basket.less";
 
+// ------------------------------
+// Product
+// ------------------------------
+
+
+@import "@{templateLocal}/less/plugins/ecommerce/product.less";
+@import "@{templateLocal}/less/plugins/ecommerce/product-gallery.less";
+
 
 // -----------------------------
 // #Table of Contents
@@ -30,6 +38,8 @@
 
 // Product Item
 .widget__ecomproduct {
+    width: 100%;
+    display: inline-block;
     @media @tablet {
         padding: 40px 0;
     }
@@ -87,7 +97,7 @@
 }
 
 .ecomproduct__product-article {
-    width: 80%;
+    width: 98%;
     margin: 0px auto;
     position: relative;
     z-index: 9999;
@@ -128,9 +138,8 @@
 }
 
 .ecomproduct__product-gallery {
-    width: 8%;
-    float: right;
-    margin: 0 0 0 10px;
+    width: 50%;
+    display: inline-block;
     @media @tablet {
         float: initial;
         width: 100%;
@@ -146,6 +155,12 @@
     margin-bottom: 20px;
 }
 
+// Product Container
+.widget[data-name="ecomproduct"] {
+    width: 50%;
+    float: right;
+}
+
 // Product Information
 .ecomproduct__form {
     background-color: transparent;
@@ -156,7 +171,7 @@
 }
 
 .ecomproduct__product-content {
-    width: 50%;
+    width: 100%;
     float: right;
     display: inline-block;
     @media @tablet {
@@ -185,10 +200,19 @@
     padding: 0;
 }
 
+.ecomproduct__product-price {
+    font-size: @font-swatch2-font-size;
+    font-family:@font-swatch2-font-family;
+    line-height:@font-swatch2-line-height;
+    font-weight: 700;
+    font-style: italic;
+}
+
 // Basket Buttons
 .js-ecom-product-add-to-cart-btn {
     background-color: @color-swatch3;
     color: @font-swatch7-color;
+    font-family: @font-swatch6-font-family;
     margin: 20px 0;
     z-index: 9999;
     position: relative;
@@ -201,6 +225,27 @@
     text-align: center;
 }
 
+.ecomproduct__view-basket-wrap {
+    float: left;
+    display: inline-block;
+    padding-top: 20px;
+    padding-left: 20px;
+    @media @tablet {
+        display: block;
+        float: initial;
+        padding-top: 0;
+        padding-left: 0;
+    }
+}
+
+.ecomproduct__form-group {
+    display: inline-block;
+    float: left;
+    @media @tablet {
+        display: block;
+        float: initial;
+    }
+}
 
 
 
@@ -676,3 +721,4 @@ select {
 .ecomproductslist__form-body {
     margin: 10px 0 0;
 }
+

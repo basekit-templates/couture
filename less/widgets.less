@@ -1132,15 +1132,28 @@ input.input[type=search],
     }
     .signupform__form-group:nth-child(1) {
         width: 80%;
+        @media @tablet {
+            width: 100%;
+        }
     }
     .signupform__form-group:nth-child(2) {
         width: 20%;
         float: right;
         display: inline-block;
+        text-align: center;
+        @media @tablet {
+            margin-top: 10px;
+        }
+        @media @mobile {
+            margin-top: 0;
+        }
     }
     .button--submit {
         width: 100%;
         padding: 8px 8px 12px 8px;
+        @media @tablet {
+            width: 30%;
+        }
     }
     .signupform__form {
         padding: 20px 20px 10px 20px;
