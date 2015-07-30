@@ -932,6 +932,12 @@ input.input[type=search],
     width: 100%!important;
 }
 
+.responsivecolumns .columns-three-left .contactform__label,
+.responsivecolumns .columns-three-middle .contactform__label,
+.responsivecolumns .columns-three-right .contactform__label {
+    padding: 12px 0;
+}
+
 // Blog
 
 .responsivecolumns .columns-two-left .blogsearch__label,
@@ -959,7 +965,6 @@ input.input[type=search],
 .responsivecolumns .blogsearch__fieldset {
     padding: 0;
 }
-
 
 .signupform__label {
     float: left;
@@ -1218,6 +1223,7 @@ input.input[type=search],
         text-align: center;
         @media @tablet {
             margin-top: 10px;
+            width: 100%;
         }
         @media @mobile {
             margin-top: 0;
@@ -1227,7 +1233,7 @@ input.input[type=search],
         width: 100%;
         padding: 8px 8px 12px 8px;
         @media @tablet {
-            width: 30%;
+            width: 20%;
         }
     }
     .signupform__form {
