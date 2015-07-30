@@ -943,11 +943,17 @@ input.input[type=search],
 .responsivecolumns .columns-two-left .blogsearch__label,
 .responsivecolumns .columns-two-right .blogsearch__label {
     width: 25%!important;
+    @media @tablet {
+        width: 100%!important;
+    }
 }
 
 .responsivecolumns .columns-two-left .blogsearch__input,
 .responsivecolumns .columns-two-right .blogsearch__input {
     width: 75%!important;
+    @media @tablet {
+        width: 100%!important;
+    }
 }
 
 .responsivecolumns .columns-three-left .blogsearch__label,
@@ -1235,6 +1241,9 @@ input.input[type=search],
         @media @tablet {
             width: 20%;
         }
+        @media @mobile {
+            width: 100%;
+        }
     }
     .signupform__form {
         padding: 20px 20px 10px 20px;
@@ -1242,12 +1251,16 @@ input.input[type=search],
     }
     .signupform__form-body {
         margin: 0;
+        padding: 0;
     }
     .form-group {
         width: 50%;
     }
     h1, h2, h3, h4, p {
         padding-bottom: 0;
+    }
+    .socialicons__social-item:hover {
+        background-color: transparent;
     }
 }
 
