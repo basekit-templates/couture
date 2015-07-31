@@ -679,7 +679,11 @@ th {
 
 .ecomproductslist__button {
     color: @font-swatch4-color;
-    text-indent: -150px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
     &:hover {
         background-color: transparent!important;
     }
@@ -687,6 +691,14 @@ th {
         content:"\f002";
         font-family: 'FontAwesome', sans-serif;
         color: @font-swatch4-color;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: @color-swatch1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 }
 
