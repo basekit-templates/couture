@@ -227,44 +227,6 @@ if($("body.edit-mode").length > 0) {
 
 
 // ---------------------------------
-// Navigation
-// ---------------------------------
-
-
-
-
-if(publishedmode==true) {
-
-    // Open Navigation Overlay
-
-     $( ".extendednavigation__navigation-toggle" ).click(function() {
-        $( ".widget__extendednavigation" ).toggleClass( "open" );
-        $( "body, html" ).toggleClass( "navigation--open" );
-    });
-
-    // Close navigation overlay when clicked on the screen
-
-    $('.navigation-body').click(function(e) {
-        if (e.target == this) {
-            closeEverything();
-        }
-    });
-
-    // Togglse class open to display/hide folders
-
-    $( ".navigation-item.folder .item-name--parent" ).each(function() {
-        $( this ).click(function() {
-            $( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
-        });
-    });
-
-}
-
-
-
-
-
-// ---------------------------------
 // Basket Overlay
 // ---------------------------------
 
