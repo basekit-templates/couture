@@ -163,7 +163,7 @@
 
 // Product Container
 .widget[data-name="ecomproduct"] {
-    width: 50%;
+    width: 48%;
     float: right;
     margin-top: 60px;
     @media @tablet {
@@ -220,6 +220,10 @@
     margin: 20px 0;
     z-index: 9999;
     position: relative;
+    margin-right: 20px;
+    @media @tablet {
+        margin-right: 0;
+    }
 }
 
 .ecomproduct__button,
@@ -233,7 +237,6 @@
     float: left;
     display: inline-block;
     padding-top: 20px;
-    padding-left: 20px;
     @media @tablet {
         display: block;
         float: initial;
