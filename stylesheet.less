@@ -50,6 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-attachment: fixed;
     & > * {
         flex: 0 0 auto;
     }
@@ -87,7 +88,7 @@ body {
 	padding: 10px 2%;
 	@media @tablet {
 		display: block;
-		padding: 15px 4% 15px;
+		padding: 25px 4% 25px;
 	}
 }
 
@@ -139,8 +140,7 @@ body {
     vertical-align: middle;
     text-align: left;
     @media @tablet {
-        display: block;
-        width: 100%;
+        display: none;
     }
 }
 
@@ -166,6 +166,10 @@ body {
         display: block;
         width: 100%;
     }
+}
+
+.page-zones__template-widgets__ecombasket-shopbasket-bk-overlay {
+    top: 7px!important;
 }
 
 // Ecom Search Products

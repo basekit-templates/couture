@@ -138,9 +138,7 @@
         font-weight: @font-swatch1-font-weight;
         position: relative;
         margin: 0;
-        color: @color-swatch1;
         padding: 20px 30px;
-        background-color: fade(@color-swatch2, 80%);
         line-height: inherit;
         float: left;
 
@@ -158,13 +156,12 @@
     // Product Price
 
     .ecomproduct__product-price {
-        color: @font-swatch5-color;
-        background-color:  darken(fade(@color-swatch1, 90%), 3%);
+        color: @font-swatch10-color;
         padding: 0.3em 14px;
         float: left;
         clear: both;
-        font-size: bkscale(@font-swatch3-font-size, 1);
-        line-height: bkscale(@font-swatch3-line-height, 1);
+        font-size: @font-swatch3-font-size;
+        line-height: @font-swatch3-font-size;
 
         @media @bp-global-medium {
             font-size: bkscale(@font-swatch3-font-size, 0.8);
@@ -189,21 +186,7 @@
 
 .product-body {
     clear: both;
-
     margin: 20px 0;
-
-    // Paragraph
-
-    &, p {
-        @media @bp-global-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.9);
-            line-height: bkscale(@font-swatch5-line-height, 0.9);
-        }
-        @media @bp-global-small {
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-            line-height: bkscale(@font-swatch5-line-height, 0.8);
-        }
-    }
 }
 
 

@@ -2,6 +2,18 @@
 // Couture: CSS > Navigation
 // -----------------------------
 
+/* Effect 15: scale down, reveal */
+.extendednavigation__item-name {
+    color: @font-swatch6-color;
+    font-weight: 700;
+    text-shadow: none;
+    text-rendering: optimizelegibility;
+    transition: .2s;
+}
+
+.extendednavigation__item-name::before {
+    color: @font-swatch6-color;
+}
 
 // Navigation Bar
 // --------------
@@ -23,7 +35,7 @@
 }
 
 .bk-pt-default .extendednavigation__navigation-body {
-  border-bottom: 1px solid #f3ece5;
+    border-bottom: 1px solid #f3ece5;
 }
 
 // Navigation Flexbox

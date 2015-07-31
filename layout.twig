@@ -40,6 +40,24 @@
 <script src="{{asset('js/main.js')}}"></script>
 <script src="{{ asset('js/theme.js')}}"></script>
 
-
+    <!-- Nav Menu Script -->
+    <script>
+        // Toggles class open to display/hide the whole navigation
+        $( ".navigation-toggle" ).click(function() {
+            $( ".bk-extendednavigation" ).toggleClass( "open" );
+        });
+        // Togglse class open to display/hide folders
+        $( ".navigation-item.folder" ).each(function() {
+            $( this ).click(function() {
+                $( this ).toggleClass( "open" );
+            });
+        
+        // Set a data attribute that matches the content of the nav item
+        var link = document.querySelectorAll('.item-name');
+        for (i = 0; i < link.length; i++) { 
+            link[i].setAttribute("data-hover", link[i].innerHTML);
+        }
+    </script>
+    
 </body>
 </html>
