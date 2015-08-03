@@ -198,6 +198,7 @@
 .ecomproduct__category-link,
 .ecomproduct__tag-link {
     color: @color-swatch2;
+    border-bottom: 3px solid @color-swatch1;
 }
 
 .ecomproduct__select-wrap,
@@ -221,6 +222,9 @@
     z-index: 9999;
     position: relative;
     margin-right: 20px;
+    &:hover {
+        background-color: lighten(@color-swatch2, 10%);
+    }
     @media @tablet {
         margin-right: 0;
     }
@@ -254,6 +258,7 @@
         width: 100%;
     }
 }
+
 
 
 
@@ -420,6 +425,11 @@
     }
 }
 
+.basket-list {
+    background-color: @color-swatch1;
+    padding: 0;
+}
+
 // Item Remove Button
 .item-remove {
     position: absolute;
@@ -448,8 +458,13 @@
 }
 
 .basket-item, .ecombasket__basket-footer {
-    background-color: @color-swatch7;
+    background-color: @color-swatch1;
     padding: 0 20px;
+}
+
+.basket-item {
+    padding: 20px;
+    margin-bottom: 0;
 }
 
 .basket-toggle {

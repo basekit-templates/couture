@@ -180,12 +180,12 @@
         width: 32.5%;
         margin-bottom: 15px;
         .image-title {
-            font-family:@font-swatch9-font-family;
-            font-size:@font-swatch9-font-size;
-            font-weight: @font-swatch9-font-weight;
-            line-height:@font-swatch9-line-height;
+            font-family:@font-swatch4-font-family;
+            font-size:@font-swatch4-font-size;
+            font-weight: @font-swatch4-font-weight;
+            line-height:@font-swatch4-line-height;
             color: @font-swatch9-color;
-            letter-spacing: @font-swatch9-letter-spacing;
+            letter-spacing: @font-swatch4-letter-spacing;
         }
         .image-description {
             font-family:@font-swatch5-font-family;
@@ -243,15 +243,6 @@
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    &:after {
-        border: 1px solid @color-swatch1;
-        content: "";
-        position: absolute;
-        top: 10px;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-    }
     &:hover {
         opacity: 1;
     }
@@ -475,7 +466,8 @@
         max-width: 65%;
     }
     @media @tablet {
-        max-width: 80%;
+        max-width: 80%;    
+        padding: 20px;
     }
 }
 
@@ -647,6 +639,13 @@
     width: 110px;
     margin-top: -24px;
     height: 50px;
+    @media @mobile {
+        width: 50px;
+    }
+}
+
+.widget__responsivecolumns .pause-toggle {
+    width: 50px;
 }
 
 .responsiveslideshow__pause-toggle {
@@ -890,6 +889,9 @@ input.input[type=search],
     width: 100%;
     text-align: center;
     padding: 0 15%;
+    @media @mobile {
+        padding: 0;
+    }
 }
 
 // Sign up Form
@@ -1074,6 +1076,7 @@ input.input[type=search],
     }
     @media @mobile {
         text-align: center;
+        padding: 0;
     }
 }
 
