@@ -426,14 +426,13 @@
 }
 
 .basket-list {
-    background-color: @color-swatch1;
+    background-color: transparent;
     padding: 0;
 }
 
 // Item Remove Button
 .item-remove {
     position: absolute;
-    top: 50px;
     right: 0;
     z-index: 9999;
     padding: 10px;
@@ -443,6 +442,12 @@
         margin-right: 0;
     }
 }
+
+.ecombasket__item-remove {
+    top: 42%;
+    bottom: 45%;
+}
+
 // Hide button text
 .remove-text { 
     display: none;
@@ -465,6 +470,8 @@
 .basket-item {
     padding: 20px;
     margin-bottom: 0;
+    background-color: @color-swatch1!important;
+    border-bottom: 1px solid @color-swatch7;
 }
 
 .basket-toggle {
