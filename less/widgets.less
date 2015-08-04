@@ -1174,7 +1174,10 @@ input.input[type=search],
     .signupform__input {
         display: inline-block;
         float: left; 
-        width: 70%;
+        width: 100%;
+    }
+    .signupform__label {
+        display: none;
     }
     .signupform__form-group {
         margin-bottom: 0;
@@ -1193,13 +1196,18 @@ input.input[type=search],
         }
     }
     .twitter__avatar {
-    display: inline-block;
-    margin-left: 20px;
-    float: right;
-    @media @mobile {
-        display: table;
-        margin: 0px auto 20px;
-        float: initial;
+        display: inline-block;
+        margin-left: 20px;
+        float: right;
+        @media @tablet {
+            display: block;
+            margin-left: 0;
+            float: initial;
+        }
+        @media @mobile {
+            display: table;
+            margin: 0px auto 20px;
+            float: initial;
         }
     }
     .map__embed-wrap {

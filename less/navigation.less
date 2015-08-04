@@ -68,6 +68,9 @@
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    @media @tablet {
+        display: block;
+    }
 }
 
 .extendednavigation__navigation-item {
@@ -165,6 +168,9 @@
         position: absolute;
         opacity: 0;
         transition: all, 0.5s, ease-in-out;
+        @media @tablet {
+            display: block;
+        }
     }
 
     &.open .navigation-list {
