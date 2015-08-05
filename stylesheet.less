@@ -1,3 +1,5 @@
+@import "https://raw.githubusercontent.com/basekit-templates/bk-less-framework/master/vars.less";
+
 // --------------------------------
 // BaseKit Baseplate Theme (v2.0)
 // --------------------------------
@@ -17,9 +19,9 @@
 // 1. #LESS Includes
 // -----------------------------
 
-@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework 
+@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework
 
-// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into 
+// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
 //    your template to guarentee widgets come to life. Proivides default styles for all widgets.
 
 // Template Includes
@@ -35,6 +37,9 @@
 
 
 
+@bp-global-large:   ~"only screen and (min-width : 1200px)";
+@bp-global-medium:  ~"only screen and (min-width : 851px) and (max-width : 1200px)";
+@bp-global-small:   ~"only screen and (max-width : 850px)";
 
 // -----------------------------
 // 2. #Page Settings **
@@ -133,7 +138,7 @@ body {
 // -----------------------------
 
 
-// Content Widget Left 
+// Content Widget Left
 .header-search {
     width: 33.1%;
     display: inline-block;
@@ -183,7 +188,7 @@ body {
     }
 }
 
- 
+
 .flex-item.flex-product-search input[type="search"] {
     border: 0;
     border-bottom: 1px solid darken(@color-swatch1,10%);
