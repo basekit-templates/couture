@@ -775,7 +775,7 @@
 .contactform__label {
     float: left;
     display: inline-block;
-    width: 30%;
+    width: 20%;
     background-color: @color-swatch3;
     color: @font-swatch7-color;
     @media @tablet {
@@ -787,7 +787,7 @@
 .contactform__input, .contactform__textarea {
     float: left;
     display: inline-block;
-    width: 70%!important;
+    width: 80%!important;
     @media @tablet {
         width: 100%!important;
     }
@@ -850,6 +850,17 @@ input.input[type=search],
     }
 }
 
+// Contact Form Responsive Columns
+.widget__responsivecolumns .contactform__fieldset,
+.responsivecolumns .contactform__label,
+.responsivecolumns .columns-three-left .contactform__input,
+.responsivecolumns .columns-three-left .contactform__textarea {
+    width: 100%;
+}
+
+.responsivecolumns .contactform__label {
+    padding: 12px 0;
+}
 
 
 
@@ -886,128 +897,6 @@ input.input[type=search],
     }
 }
 
-// Sign up Form
-.widget__responsivecolumns .signupform__form-body {
-    padding: 0;
-}
-
-.responsivecolumns .columns-three-left .signupform__label, 
-.responsivecolumns .columns-three-middle .signupform__label, 
-.responsivecolumns .columns-three-right .signupform__label {
-    width: 100%!important;
-}
-
-.responsivecolumns .columns-three-left .signupform__input, 
-.responsivecolumns .columns-three-middle .signupform__input,
-.responsivecolumns .columns-three-right .signupform__input  {
-    width: 100%!important;
-}
-
-.responsivecolumns .columns-three-left .signupform__form-group:nth-child(2),
-.responsivecolumns .columns-three-middle .signupform__form-group:nth-child(2),
-.responsivecolumns .columns-three-right .signupform__form-group:nth-child(2) {
-    width: 100%!important;
-}
-
-
-
-
-
-// Sign up Form - 2 columns
-.responsivecolumns .columns-two-left .signupform__label, 
-.responsivecolumns .columns-two-right .signupform__label {
-    @media only screen and (min-width: 769px) and (max-width: 1024px) {
-        width: 40%!important;
-    }
-}
-
-.responsivecolumns .columns-two-left .signupform__label, 
-.responsivecolumns .columns-two-right .signupform__label {
-        width: 30%!important;
-}
-
-.responsivecolumns .columns-two-left .signupform__input, 
-.responsivecolumns .columns-two-right .signupform__input  {
-    @media only screen and (min-width: 769px) and (max-width: 1024px) {
-        width: 60%!important;
-    }
-}
-
-.responsivecolumns .columns-two-left .signupform__input, 
-.responsivecolumns .columns-two-right .signupform__input {
-    width: 70%!important;
-}
-
-.responsivecolumns .columns-two-left .signupform__form-group:nth-child(2),
-.responsivecolumns .columns-two-right .signupform__form-group:nth-child(2) {
-    width: 100%;
-}
-
-// Contact Form
-.widget__responsivecolumns .contactform__fieldset {
-    width: 100%;
-}
-
-.responsivecolumns .columns-three-left .contactform__label,
-.responsivecolumns .columns-three-middle .contactform__label,
-.responsivecolumns .columns-three-right .contactform__label {
-    width: 100%;
-}
-
-.responsivecolumns .columns-three-left .contactform__input,
-.responsivecolumns .columns-three-middle .contactform__input,
-.responsivecolumns .columns-three-right .contactform__input {
-    width: 100%!important;
-}
-
-.responsivecolumns .columns-three-left .contactform__textarea,
-.responsivecolumns .columns-three-middle .contactform__textarea,
-.responsivecolumns .columns-three-right .contactform__textarea {
-    width: 100%!important;
-}
-
-.responsivecolumns .columns-three-left .contactform__label,
-.responsivecolumns .columns-three-middle .contactform__label,
-.responsivecolumns .columns-three-right .contactform__label {
-    padding: 12px 0;
-}
-
-
-
-
-// Blog
-.responsivecolumns .columns-two-left .blogsearch__label,
-.responsivecolumns .columns-two-right .blogsearch__label {
-    width: 40%!important;
-    @media @tablet {
-        width: 100%!important;
-    }
-}
-
-.responsivecolumns .columns-two-left .blogsearch__input,
-.responsivecolumns .columns-two-right .blogsearch__input {
-    width: 60%!important;
-    @media @tablet {
-        width: 100%!important;
-    }
-}
-
-.responsivecolumns .columns-three-left .blogsearch__label,
-.responsivecolumns .columns-three-middle .blogsearch__label,
-.responsivecolumns .columns-three-right .blogsearch__label {
-    width: 100%!important;
-}
-
-.responsivecolumns .columns-three-left .blogsearch__input,
-.responsivecolumns .columns-three-middle .blogsearch__input,
-.responsivecolumns .columns-three-right .blogsearch__input {
-    width: 100%!important;
-}
-
-.responsivecolumns .blogsearch__fieldset {
-    padding: 0;
-}
-
 .signupform__label {
     float: left;
     display: inline-block;
@@ -1015,7 +904,7 @@ input.input[type=search],
     color: @font-swatch7-color;
     font-size: @font-swatch7-font-size!important;
     padding: 10px;
-    width: 30%;
+    width: 20%;
     @media @tablet {
         width: 100%;
     }
@@ -1024,7 +913,7 @@ input.input[type=search],
 .signupform__input {
     float: left;
     display: inline-block;
-    width: 70%!important;
+    width: 80%!important;
     height: 48px;
     @media @tablet {
         width: 100%!important;
@@ -1044,6 +933,19 @@ input.input[type=search],
         width: 100%;
     }
 }
+
+// Sign up form Responsive Columns
+.widget__responsivecolumns .signupform__form-body {
+    padding: 0;
+}
+
+.responsivecolumns .signupform__label, 
+.responsivecolumns .signupform__input, 
+.responsivecolumns .signupform__form-group:nth-child(2) {
+    width: 100%!important;
+}
+
+
 
 
 // -----------------------------

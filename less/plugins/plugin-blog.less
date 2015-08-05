@@ -1,9 +1,9 @@
 // -------------------------------------
-// Apparel: CSS > Plugin: Blog
+// Couture: CSS > Plugin: Blog
 // -------------------------------------
 
 // -----------------------------
-// #Blogpost
+// #Blogpost Search
 // -----------------------------
 
 .blogsearch__fieldset {
@@ -11,7 +11,6 @@
     display: table;
     width: 100%;
     text-align: center;
-    padding: 0 2%;
 }
 
 .blogsearch__form-body {
@@ -36,7 +35,7 @@
 .blogsearch__label {
     display: inline-block;
     float: left;
-    width: 15%;
+    width: 20%;
     background-color: @color-swatch3;
     padding: 10px;
     color: @font-swatch7-color;
@@ -46,13 +45,22 @@
 }
 
 .blogsearch__input {
-    width: 85%!important;
+    width: 80%!important;
     height: 48px;
     @media @tablet {
         width: 100%!important;
     }
 }
 
+// Blog Search Responsive Columns
+.responsivecolumns .blogsearch__label,
+.responsivecolumns .blogsearch__input {
+    width: 100%!important;
+}
+
+.responsivecolumns .blogsearch__fieldset {
+    padding: 0;
+}
 
 
 
