@@ -7,6 +7,8 @@
 // Colour Variables
 // -----------------------------
 
+
+
 // Background
 @bg-color: @color-swatch1; // Main BG
 @bg-color-alt: darken(@color-swatch1,5%); // Alt BG
@@ -14,9 +16,9 @@
 // Contrast Colour
 @contrast-color: @color-swatch2;
 
-// Button BG Colour 
-@button-color: @color-swatch3; 
-@link-color: @color-swatch3; 
+// Button BG Colour
+@button-color: @color-swatch3;
+@link-color: @color-swatch3;
 
 // Heading Text Colour (H1 - H4)
 @heading-color: @color-swatch4;
@@ -55,8 +57,8 @@
 // Button Transitions
 // -----------------------------
 
-button:hover, 
-.button:hover, 
+button:hover,
+.button:hover,
 .socialicons__social-item:hover,
 .blogpostlist__read-more:hover {
     background-color: lighten(@color-swatch3, 10%);
@@ -80,4 +82,14 @@ button:hover,
     -ms-transition:     @prop @time @ease;
     -o-transition:      @prop @time @ease;
     transition:         @prop @time @ease;
+}
+
+
+// -----------------------------
+// Enable HW acceleration
+// -----------------------------
+.animation {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
