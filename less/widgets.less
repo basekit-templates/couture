@@ -126,9 +126,9 @@
 
 .imagewidget {
     .image-title {
-        color: @font-swatch4-color;
-        font-size: @font-swatch4-font-size;
-        line-height: @font-swatch4-line-height;
+        color: @font-swatch2-color;
+        font-size: @font-swatch2-font-size;
+        line-height: @font-swatch2-line-height;
         text-shadow: none;
     }
     .image-description {
@@ -909,6 +909,37 @@ input.input[type=search],
     width: 100%;
 }
 
+// Sign up Form - 2 columns
+
+.responsivecolumns .columns-three-left .signupform__label, 
+.responsivecolumns .columns-three-right .signupform__label {
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        width: 40%!important;
+    }
+}
+
+.responsivecolumns .columns-three-left .signupform__label, 
+.responsivecolumns .columns-three-right .signupform__label {
+        width: 30%!important;
+}
+
+.responsivecolumns .columns-three-left .signupform__input, 
+.responsivecolumns .columns-three-right .signupform__input  {
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        width: 60%!important;
+    }
+}
+
+.responsivecolumns .columns-three-left .signupform__input, 
+.responsivecolumns .columns-three-right .signupform__input {
+    width: 70%!important;
+}
+
+.responsivecolumns .columns-three-left .signupform__form-group:nth-child(2),
+.responsivecolumns .columns-three-right .signupform__form-group:nth-child(2) {
+    width: 100%;
+}
+
 // Contact Form
 .widget__responsivecolumns .contactform__fieldset {
     width: 100%;
@@ -942,7 +973,7 @@ input.input[type=search],
 
 .responsivecolumns .columns-two-left .blogsearch__label,
 .responsivecolumns .columns-two-right .blogsearch__label {
-    width: 25%!important;
+    width: 40%!important;
     @media @tablet {
         width: 100%!important;
     }
@@ -950,7 +981,7 @@ input.input[type=search],
 
 .responsivecolumns .columns-two-left .blogsearch__input,
 .responsivecolumns .columns-two-right .blogsearch__input {
-    width: 75%!important;
+    width: 60%!important;
     @media @tablet {
         width: 100%!important;
     }
@@ -1166,7 +1197,7 @@ input.input[type=search],
     .signupform__input {
         display: inline-block;
         float: left; 
-        width: 100%;
+        width: 100%!important;
     }
     .signupform__label {
         display: none;
@@ -1201,9 +1232,6 @@ input.input[type=search],
             margin: 0px auto 20px;
             float: initial;
         }
-    }
-    .map__embed-wrap {
-        margin-bottom: 20px;
     }
     .signupform__form-group:nth-child(1) {
         width: 80%;
