@@ -3,29 +3,33 @@
 
 <div class="bk-pt-default">
 
-	<!-- CONTAINER -->
-	<div class="template-container">
+	<div class="container">
 	
-		<!-- HEADER -->
-		{% include "includes/header.twig" %}
-	
-		<div class="profile-header">
-	    	{{widget('extendednavigation', 'extendednavigation', { 'align': 'right'})|raw}}
+		<!-- CONTAINER -->
+		<div class="template-container">
+		
+			<!-- HEADER -->
+			{% include "includes/header.twig" %}
+		
+			<div class="profile-header">
+		    	{{widget('extendednavigation', 'extendednavigation', { 'align': 'right'})|raw}}
+			</div>
+		
+			<!-- MAIN SECTION -->
+			<div role="main" class="ecom-product">
+		
+				{{zone('main')|raw}}
+		
+			</div>
+			<!-- END MAIN SECTION -->
+		
+			<!-- FOOTER -->
+			{% include "includes/footer.twig" %}
+		
 		</div>
-	
-		<!-- MAIN SECTION -->
-		<div role="main" class="ecom-product">
-	
-			{{zone('main')|raw}}
-	
-		</div>
-		<!-- END MAIN SECTION -->
-	
-		<!-- FOOTER -->
-		{% include "includes/footer.twig" %}
+		<!-- END CONTAINER -->
 	
 	</div>
-	<!-- END CONTAINER -->
 
 </div>
 
