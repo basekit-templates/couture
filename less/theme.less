@@ -286,11 +286,14 @@ input.input[type=email]:focus,
 input.input[type=search]:focus, 
 .contact-form__textarea:focus {
     border: 1px solid @color-swatch3!important;
-    border-color: @color-swatch3!important;
 }
 
 .template-header input.input[type=search]:focus {
     border-bottom: 1px solid darken(@color-swatch7,8%)!important;
+}
+
+.template-content input.input[type=search]:focus {
+    border:1px solid @color-swatch3!important;
 }
 
 .signupform__label, 
@@ -301,6 +304,10 @@ input.input[type=search]:focus,
     font-size: @font-swatch3-font-size;
     font-weight: @font-swatch3-font-weight;
     padding: 30px 0 0;
+}
+
+.blogsearch__legend {
+    padding: 20px 0 0;
 }
 
 .contactform__legend {
@@ -350,7 +357,10 @@ button,
     color: @font-swatch7-color;
 }
 
-
+input.input[type=search]:focus {
+    border: 1px solid red!important;
+    border-bottom: 1px solid red!important;
+}
 
 
 // -----------------------------

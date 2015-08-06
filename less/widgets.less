@@ -888,7 +888,8 @@ input.input[type=search],
     text-align: center;
     font-size: @font-swatch3-font-size;
     margin-bottom: 20px;
-        &:after {
+    padding-top: 20px;
+    &:after {
         border-top: 3px solid @color-swatch3;
         content: "";
         display: block;
@@ -907,46 +908,45 @@ input.input[type=search],
     width: 100%;
     text-align: center;
     padding: 0 15%;
-    @media @mobile {
-        padding: 0;
+    @media @tablet {
+        margin: 0px auto 0;
     }
 }
 
 .signupform__label {
-    float: left;
-    display: inline-block;
-    background-color: @color-swatch3;
-    color: @font-swatch7-color;
-    font-size: @font-swatch7-font-size!important;
-    padding: 10px;
-    width: 20%;
-    @media @tablet {
-        width: 100%;
-    }
+    display: none;
 }
 
 .signupform__input {
     float: left;
     display: inline-block;
-    width: 80%!important;
+    width: 100%!important;
     height: 48px;
-    @media @tablet {
-        width: 100%!important;
-    }
 }
 
 .signupform__form-group:nth-child(1) {
     display: inline-block;
     margin-bottom: 10px;
-    width: 100%;
+    width: 75%;
+    text-align: left;
+    @media @tablet {
+        width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 .signupform__form-group:nth-child(2) {
-    width: 20%;
-    margin: 0px auto;
+    width: 25%;
+    float: right;
+    text-align: left;
     @media @tablet {
         width: 100%;
+        text-align: center;
     }
+}
+
+.signupform__button { 
+    padding: 10px 30px;
 }
 
 // Sign up form Responsive Columns

@@ -7,18 +7,43 @@
 // -----------------------------
 
 .blogsearch__fieldset {
-    margin: 0px auto 10px;
+    margin: 0px auto 0;
     display: table;
     width: 100%;
     text-align: center;
 }
 
-.blogsearch__form-body {
-    margin: 20px 0px 20px;
+.blogsearch__form-body{
+    margin: 0px auto 0;
+    display: table;
+    width: 100%;
+    text-align: center;
+    padding: 0 15%;
+}
+
+.blogsearch__form-group:nth-child(1) {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 75%;
+    text-align: left;
+    @media @tablet {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+.blogsearch__form-group:nth-child(2) {
+    width: 25%;
+    float: right;
+    text-align: left;
+    @media @tablet {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .blogsearch__legend {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     &:after {
         border-top: 3px solid @color-swatch4;
         content: "";
@@ -33,23 +58,19 @@
 }
 
 .blogsearch__label {
-    display: inline-block;
-    float: left;
-    width: 20%;
-    background-color: @color-swatch3;
-    padding: 10px;
-    color: @font-swatch7-color;
-    @media @tablet {
-        width: 100%;
-    }
+    display: none;
 }
 
 .blogsearch__input {
-    width: 80%!important;
+    width: 100%!important;
     height: 48px;
     @media @tablet {
-        width: 100%!important;
+        margin-bottom: 20px;
     }
+}
+
+.blogsearch__button {
+    padding: 10px 30px;
 }
 
 // Blog Search Responsive Columns
@@ -137,7 +158,6 @@
         color: #305286;
         float: left;
         font-size: 30px;
-        margin-right: 20px;
         padding-right: 20px;
         @media @tablet {
             margin-right: 0;
