@@ -43,6 +43,8 @@
     .clearfix
 }
 
+
+
 .ecombasketsummary__summary-section {
     text-align: center;
     @media @tablet {
@@ -121,6 +123,10 @@
     float: left;
     display: inline-block;
     .clearfix
+    @media @tablet {
+        width: 100%;
+        margin-bottom: 50px;
+    }
 }
 
 .ecomproduct__image-link {
@@ -166,6 +172,10 @@
     width: 48%;
     float: right;
     margin-top: 60px;
+    .product--one-image & {
+        width: 100%;
+        float: initial;
+    }
     @media @tablet {
         width: 100%;
         margin-top: 0;
@@ -185,8 +195,12 @@
     width: 100%;
     float: right;
     display: inline-block;
+    .product--one-image & { 
+        width: 50%;
+    }
     @media @tablet {
         text-align: center;
+        width: 100%;
     }
 }
 
