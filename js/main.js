@@ -28,7 +28,7 @@ var scrollEffect = function (elem) {
 
     // Apply styles as user scrolls
     elem.setAttribute(
-        "style", "opacity:" + Math.max(0, parseFloat(1-(4/window_height*window.pageYOffset)).toFixed(2)) + "; -webkit-transform: translateY(" + window.pageYOffset + "px)"
+        "style", "opacity:" + Math.max(0, parseFloat(1-(1/window_height*window.pageYOffset)).toFixed(2)) + "; -webkit-transform: translateY(" + window.pageYOffset + "px)"
     );
 
 };

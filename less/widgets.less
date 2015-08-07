@@ -405,19 +405,13 @@
 // Feature Background (Image)
 // --------------------------
 
-
-.background-image {
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 .feature, .bk-feature {
     text-align: center;
     overflow: hidden;
 }
 
 .feature__background-image {
-    background-attatchment: fixed;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
@@ -430,6 +424,7 @@
     @media @tablet {
         min-height: 300px;
         max-height: 500px;
+        background-attachment: scroll!important;
     }
     @media @mobile {
         min-height: 200px;
