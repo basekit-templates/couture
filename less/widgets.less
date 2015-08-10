@@ -679,6 +679,10 @@
     color: @font-swatch8-color;
 }
 
+.responsiveslideshow .pagination-item.selected {
+    background-color: lighten(@color-swatch3, 10%);
+}
+
 .responsiveslideshow__next-button, 
 .responsiveslideshow__previous-button, 
 .responsiveslideshow__pause-toggle {
@@ -739,6 +743,12 @@
     &:hover {
         text-decoration: none;
     }   
+}
+
+.companyphone__phone-number-link {
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .phone-number-link {
@@ -841,9 +851,6 @@ input.input[type=search],
 .contact-form__textarea {
     -webkit-appearance: none;
     border-radius: 0;
-    @media @mobile {
-        margin-bottom: 10px;
-    }
     &:focus {
         border-color: @color-swatch4;
     }
@@ -905,6 +912,34 @@ input.input[type=search],
     width: 100%;
     text-align: center;
     padding: 0 15%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     @media @tablet {
         margin: 0px auto 0;
         padding: 0;
@@ -923,24 +958,35 @@ input.input[type=search],
 }
 
 .signupform__form-group:nth-child(1) {
-    display: inline-block;
-    margin-bottom: 10px;
-    width: 75%;
-    text-align: left;
-    @media @tablet {
-        width: 100%;
-        margin-bottom: 0;
-    }
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
 }
 
 .signupform__form-group:nth-child(2) {
-    width: 25%;
-    float: right;
-    text-align: left;
-    @media @tablet {
-        width: 100%;
-        text-align: center;
-    }
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
 }
 
 .signupform__button { 
@@ -1272,3 +1318,5 @@ input.input[type=search],
 hr.rule {
     background-color: @color-swatch7;
 }
+
+

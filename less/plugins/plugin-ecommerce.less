@@ -475,8 +475,8 @@
 }
 
 .ecombasket__item-remove {
-    top: 42%;
-    bottom: 45%;
+    top: 40%;
+    bottom: 36%;
 }
 
 // Hide button text
@@ -672,7 +672,7 @@ th {
 
 .ecomproductslist__fieldset--search {
     float: right;
-    width: 40%;
+    width: 24%;
     @media @tablet {
         float: initial;
         width: 100%;
@@ -681,7 +681,7 @@ th {
 
 .ecomproductslist__fieldset--filters {
     float: left;
-    width: 60%;
+    width: 75%;
     @media @tablet {
         width:100%;
     }
@@ -745,6 +745,7 @@ input.input[type=search]:focus {
     padding: 0;
     &:hover {
         color: @font-swatch7-color;
+        background-color: @color-swatch1;
     }
     &:after {
         content:"\f002";
@@ -777,6 +778,26 @@ input.input[type=search]:focus {
 .ecomproductslist__form-group {
     @media @tablet {
         width: 100%;
+    }
+}
+
+.ecomproductslist__fieldset--search .ecomproductslist__form-group:nth-child(1) {
+    width: 70%;
+    margin-right: 0;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+.ecomproductslist__fieldset--search .ecomproductslist__form-group:nth-child(2) {
+    width: 18%;
+    float: right;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 30px;
+    @media @tablet {
+        width: 100%;
+        padding: 0;
     }
 }
 
