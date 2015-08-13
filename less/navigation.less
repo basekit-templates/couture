@@ -122,7 +122,7 @@
     &:hover {
         -webkit-backface-visibility: hidden;
         background-color: @color-swatch7;
-        color: @font-swatch6-color;
+        color: @font-swatch4-color!important;
     }
     @media @tablet {
         border-bottom: 0;
@@ -134,18 +134,9 @@
 }
 
 // Selected Class
-.extendednavigation li.selected > a  {
-    color: @font-swatch6-color;
+.extendednavigation .navigation-item.selected > .item-name {
     background-color: @color-swatch7;
-    &:before {
-        color: @font-swatch6-color;
-    }
-}
-
-.extendednavigation__navigation-item.folder.selected span,
-.extendednavigation__navigation-item.folder.selected .selected {
-    color: @font-swatch6-color;
-    text-decoration: underline;
+    color: @font-swatch4-color!important;
 }
 
 
