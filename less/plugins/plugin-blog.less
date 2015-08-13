@@ -6,13 +6,6 @@
 // #Blogpost Search
 // -----------------------------
 
-.blogsearch__fieldset {
-    margin: 0px auto 0;
-    display: table;
-    width: 100%;
-    text-align: center;
-}
-
 .blogsearch__form-body{
     display: -webkit-box;
     display: -moz-box;
@@ -78,7 +71,9 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-    margin-top: -20px;
+    @media @tablet {
+        margin-top: -20px;
+    }
 }
 
 .blogsearch__legend {
