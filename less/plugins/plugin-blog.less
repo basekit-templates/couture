@@ -6,7 +6,7 @@
 // #Blogpost Search
 // -----------------------------
 
-.blogsearch__form-body{
+.blogsearch__form-body {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -39,6 +39,9 @@
         margin: 0px auto 0;
         padding: 0;
     }
+    @media @mobile {
+        display: block;
+    }
 }
 
 .blogsearch__form-group:nth-child(1) {
@@ -55,6 +58,9 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
+    @media @mobile {
+        display: block;
+    }
 }
 
 .blogsearch__form-group:nth-child(2) {
@@ -73,6 +79,9 @@
     align-self: auto;
     @media @tablet {
         margin-top: -20px;
+    }
+    @media @mobile {
+        display: block;
     }
 }
 
