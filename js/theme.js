@@ -237,7 +237,7 @@ if(publishedmode==true) {
     });
 
 
-    $(document).click(function(event) {
+    $(document).on("click touchstart", ".basket-body", function(event) {
         if( $(event.target).is(".basket-body") ) {
             closeEverything();
         }
