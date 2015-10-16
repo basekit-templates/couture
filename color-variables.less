@@ -1,5 +1,110 @@
-// Primary & Secondary Colours
 
+// Primary & Secondary Colours
+@color__primary: @color-swatch3;
+@color__secondary: @color-swatch7;
+
+
+// Body Background Colour
+@color__body--background: @color-swatch1;
+
+
+// Companyname
+@color__companyname--text: @font-swatch10-color;
+
+
+// Typography
+@color__h1--text: @font-swatch1-color;
+@color__h2--text: @font-swatch2-color;
+@color__h3--text: @font-swatch3-color;
+@color__h4--text: @font-swatch4-color;
+@color__p--text: @font-swatch5-color;
+@color__link--text: @color-swatch2;
+
+
+// Buttons
+@color__button--background: @color__primary;
+@color__button--background--hover: lighten(@color__primary, 15%);
+@color__button--text: @font-swatch7-color;
+@color__button--text--hover: @font-swatch7-color;
+
+
+// Header & Footer
+@color__header--background: @color-swatch1;
+@color__footer--background: @color-swatch4;
+
+
+// Navigation
+@color__navigation--background: transparent;
+@color__navigation--text: @font-swatch6-color;
+@color__navigation--text--hover: @font-swatch6-color-hover;
+@color__navigation--text--selected: @font-swatch6-color-hover;
+@color__navigation-list--background: @color-swatch4;
+@color__navigation-item--background--hover: @color__secondary;
+@color__navigation-item--background--selected: @color__secondary;
+
+
+// Feature
+@color__feature-content--background: fade(@color-swatch4, 40%);
+@color__feature-headline--text: @color-swatch6;
+@color__feature-strapline--text: @color-swatch6;
+@color__feature-button--text: @color-swatch6;
+@color__feature-button--background: @color-swatch2;
+@color__feature-button--background--hover: darken(@color-swatch2, 10%);
+
+
+// Forms
+@color__form--background: @color__secondary;
+@color__form-legend--text: @color-swatch4;
+@color__form-label--text: @color-swatch4;
+
+
+// Image Widget
+@color__image-title--text: @color-swatch4;
+@color__image-description--text: @color-swatch4;
+
+
+// Image Gallery
+@color__gallery-caption--background: fade(@color-swatch3, 65%);
+@color__gallery-title--text: @color-swatch6;
+@color__gallery-description--text: @color-swatch6;
+
+
+// Slideshow
+@color__slideshow-title--text: lighten(@color-swatch1, 30%);
+@color__slideshow-description--text: lighten(@color-swatch1, 30%);
+
+
+// Twitter
+@color__twitter--background: @color__secondary;
+
+
+// Social Icons
+@color__socialicons--icon: @color__primary;
+@color__socialicons--icon--background: transparent;
+
+
+// Blog
+@color__blogpostlist-title--text: @color-swatch4;
+@color__blogpost-title--text: @color-swatch4;
+
+
+
+// Ecommerce
+@color__ecomproductslist-product-title--text: @color-swatch2;
+@color__ecomproduct-title--text: @color-swatch4;
+@color__ecomproduct-price--text: @color-swatch4;
+@color__ecombasket--background: @color-swatch3;
+@color__ecombasket-list--background: @color-swatch1;
+@color__ecombasket-button--background: @color-swatch1;
+@color__ecombasket-button--background--hover: fade(@color-swatch1, 80%);
+@color__ecombasket-button--text: @color-swatch4;
+
+
+// Menu
+@color__menu-section-featured--background: @color__secondary;
+
+
+// Primary & Secondary Colours
 .navigation-item.folder.open .navigation-list,
 .contactform__label,
 .button,
@@ -50,7 +155,7 @@ th,
 .product-item-title,
 .summary-item-link,
 .ecomcategorieslist__category-link {
-	color: @color__secondary;
+	color: @color-swatch2;
 }
 
 
@@ -79,27 +184,22 @@ a {
 
 // Headings & Paragraph text
 h1 {
-	background-color: @color__h1--background;
 	color: @color__h1--text;
 }
 
 h2 {
-	background-color: @color__h2--background;
 	color: @color__h2--text;
 }
 
 h3 {
-	background-color: @color__h3--background;
 	color: @color__h3--text;
 }
 
 h4 {
-	background-color: @color__h4--background;
 	color: @color__h4--text;
 }
 
 p {
-	background-color: @color__p--background;
 	color: @color__p--text;
 }
 
@@ -148,10 +248,6 @@ button.ecombasket__basket-toggle,
 	background-color: @color__header--background;
 }
 
-.template-sidebar {
-	background-color: @color__sidebar--background;
-}
-
 .template-footer {
 	background-color: @color__footer--background;
 }
@@ -160,64 +256,49 @@ button.ecombasket__basket-toggle,
 // Navigation
 .extendednavigation {
 	background-color: @color__navigation--background;
-	border-color: @color__navigation--border;
 	color: @color__navigation--text;
 
 	&:hover {
 		color: @color__navigation--text--hover;
 	}
 
-	&__navigation-list {
-		background-color: @color__navigation-list--background;
-	}
-
-	&__navigation-item {
-		background-color: @color__navigation-item--background;
-		color: @color__navigation-item--text;
-	}
-
 	&__navigation-item:hover {
-		background-color: @color__navigation-item--background--selected;
-		color: @color__navigation-item--selected;
+		background-color: @color__navigation-item--background--hover;
+		color: @color__navigation--text--hover;
 	}
 
 	&__navigation-item.selected {
 		background-color: @color__navigation-item--background--selected;
 
-		a,
+		.item-name,
 		.text {
-			color: @color__navigation-item--selected;
+			color: @color__navigation--text--selected;
 		}
 	}
 
 	li.selected a,
 	li:hover a {
-		color: @color__navigation-item--selected;
+		color: @color__navigation--text--selected;
 	}
 }
 
 
 // Feature
 .feature {
-	background-color: @color__feature--background;
-
 	&__content-wrap {
 		background-color: @color__feature-content--background;
 	}
 
 	&__headline {
-		background-color: @color__feature-headline--background;
 		color: @color__feature-headline--text;
 	}
 
 	&__strapline {
-		background-color: @color__feature-strapline--background;
 		color: @color__feature-strapline--text;
 	}
 
 	&__button {
 		background-color: @color__feature-button--background;
-		border-color: @color__feature-button--border;
 		color: @color__feature-button--text;
 	}
 
@@ -232,7 +313,6 @@ button.ecombasket__basket-toggle,
 	background-color: @color__form--background;
 
 	.legend {
-		background-color: @color__form-legend--background;
 		color: @color__form-legend--text;
 	}
 
@@ -249,12 +329,6 @@ button.ecombasket__basket-toggle,
 
 // Image
 .imagewidget {
-	background-color: @color__image--background;
-
-	&__caption {
-		background-color: @color__image-caption--background;
-	}
-
 	&__image-title {
 		color: @color__image-title--text;
 	}
@@ -268,8 +342,6 @@ button.ecombasket__basket-toggle,
 
 // Gallery
 .gallery {
-	background-color: @color__gallery--background;
-
 	&__caption {
 		background-color: @color__gallery-caption--background;
 	}
@@ -286,11 +358,6 @@ button.ecombasket__basket-toggle,
 
 // Slideshow
 .responsiveslideshow {
-	background-color: @color__slideshow--background;
-
-	&__caption {
-		background-color: @color__slideshow-caption--background;
-	}
 
 	&__image-title {
 		color: @color__slideshow-title--text;
@@ -301,17 +368,18 @@ button.ecombasket__basket-toggle,
 	}
 
 	&__pagination-item {
-		background-color: @color__slideshow-pagination-item--background;
-		color: @color__slideshow-pagination-item--text;
+		background-color: @color__button--background;
+		color: @color__button--text;
 	}
 
 	&__pagination-item.selected {
-		background-color: @color__slideshow-pagination-item--background--selected;
-		color: @color__slideshow-pagination-item--text--selected;
+		background-color: @color__button--background;
+		border-color: lighten(@color__button--background, 20%);
+		color: @color__button--text;
 	}
 
 	&__pagination-item:hover {
-		color: @color__slideshow-pagination-item--text--hover;
+		color: @color__button--background--hover;
 	}
 }
 
@@ -319,72 +387,27 @@ button.ecombasket__basket-toggle,
 // Twitter
 .twitter {
 	background-color: @color__twitter--background;
-
-	&__tweet-item {
-		background-color: @color__twitter-item--background;
-	}
-
-	&__account-name {
-		background-color: @color__twitter-account-name--background;
-	}
 }
 
 
 // Social icons
 .socialicons {
-
 	&__social-link {
 		background-color: @color__socialicons--icon--background;
 		color: @color__socialicons--icon;
-	}
-
-	&__social-link:hover {
-		color: @color__socialicons--icon--hover;
-	}
-
-	&__social-name {
-		color: @color__socialicons--text;
 	}
 }
 
 
 // Blog
-
-.blogsearch {
-	background-color: @color__blogsearch--background;
-
-	&_legend {
-		background-color: @color__blogsearch-legend--background;
-		color: @color__blogsearch-legend--text;
-	}
-
-	&__label {
-		color: @color__blogsearch-label--text;
-	}
-}
-
 .blogpostlist {
-	background-color: @color__blogpostlist--background;
-
-	&__post-article {
-		background-color: @color__blogpostlist-article--background;
-	}
-
 	&__post-title {
-		background-color: @color__blogpostlist-title--background;
 		color: @color__blogpostlist-title--text;
 	}
 }
 
 .blogpost {
-	background-color: @color__blogpost--background;
-
-	&__post-article {
-		background-color: @color__blogpost-article--background;
-	}
-
 	&__post-title {
-		background-color: @color__blogpost-title--background;
 		color: @color__blogpost-title--text;
 	}
 }
@@ -393,52 +416,17 @@ button.ecombasket__basket-toggle,
 // Ecommerce
 
 .ecomproductslist {
-	background-color: @color__ecomproductslist--background;
-
-	&__product-filters {
-		background-color: @color__ecomproductslist-filters--background;
-	}
-
-	&__legend {
-		background-color: @color__ecomproductslist-legend--background;
-		color: @color__ecomproductslist-legend--text;
-	}
-
-	&__label {
-		color: @color__ecomproductslist-label--text;
-	}
-
-	&____product-list {
-		background-color: @color__ecomproductslist-product-list--background;
-	}
-
-	&____product-item {
-		background-colour: @color__ecomproductslist-product-item--background;
-	}
-
 	&__product-title {
 		color: @color__ecomproductslist-product-title--text;
 	}
 }
 
 .ecomproduct {
-	background-color: @color__ecomproduct--background;
-
-	&__product-images {
-		background-color: @color__ecomproduct-images--background;
-	}
-
-	&__product-content {
-		background-color: @color__ecomproduct-content--background;
-	}
-
 	&__product-title {
-		background-color: @color__ecomproduct-title--background;
 		color: @color__ecomproduct-title--text;
 	}
 
 	&__product-price {
-		background-color: @color__ecomproduct-price--background;
 		color: @color__ecomproduct-price--text;
 	}
 
@@ -452,7 +440,6 @@ button.ecombasket__basket-toggle,
 
 	&__button {
 		background-color: @color__ecombasket-button--background;
-		border-color: @color__ecombasket-button--border;
 		color: @color__ecombasket-button--text;
 	}
 
@@ -465,24 +452,11 @@ button.ecombasket__basket-toggle,
 
 // Menu
 
-.menusections {
-	background-color: @color__menusections--background;
-}
 
 .menu {
-	background-color: @color__menu--background;
-
-	&__menu-item {
-		background-color: @color__menu-item--background;
-	}
-
-	&__section-header {
-		background-color: @color__menu-section-header--background;
-	}
-
 	&__section--featured {
 		background-color: @color__menu-section-featured--background;
-		border-color: @color__menu-section-featured--border;
+
 	}
 }
 

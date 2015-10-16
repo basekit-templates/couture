@@ -111,7 +111,7 @@
             "font-weight": "700",
             "line-height": "26px",
             "color": "@color-swatch4",
-            "color-hover": "@color-swatch1",
+            "color-hover": "@color-swatch4",
             "letter-spacing": "2px",
             "background-color": "@color-swatch1",
             "background-color-hover": "@color-swatch7"
