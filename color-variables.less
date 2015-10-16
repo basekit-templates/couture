@@ -23,14 +23,14 @@
 
 // Buttons
 @color__button--background: @color__primary;
-@color__button--background--hover: lighten(@color__primary, 15%);
+@color__button--background--hover: lighten(@color__primary, 10%);
 @color__button--text: @font-swatch7-color;
 @color__button--text--hover: @font-swatch7-color;
 
 
 // Header & Footer
 @color__header--background: @color-swatch1;
-@color__footer--background: @color-swatch4;
+@color__footer--background: darken(@color-swatch4, 5%);
 
 
 // Navigation
@@ -171,7 +171,7 @@ a {
 	color: @color__link--text;
 
 	&:hover {
-		color: darken(@color__link--text, 10%);
+		color: darken(@color__link--text, 5%);
 	}
 }
 
@@ -385,7 +385,7 @@ button.ecombasket__basket-toggle,
 
 
 // Twitter
-.twitter {
+.widget__twitter {
 	background-color: @color__twitter--background;
 }
 
@@ -414,7 +414,6 @@ button.ecombasket__basket-toggle,
 
 
 // Ecommerce
-
 .ecomproductslist {
 	&__product-title {
 		color: @color__ecomproductslist-product-title--text;
@@ -451,8 +450,6 @@ button.ecombasket__basket-toggle,
 
 
 // Menu
-
-
 .menu {
 	&__section--featured {
 		background-color: @color__menu-section-featured--background;
