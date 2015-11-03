@@ -154,7 +154,7 @@
     "styles": {
         "colors": {
             "color__primary": "@color-swatch3",
-            "color__secondary": "@color-swatch2"
+            "color__secondary": "@color-swatch7"
         },
         "site": {
             "color__body--background": "@color-swatch1",
