@@ -223,7 +223,7 @@
             "color__socialicons--icon--background": "transparent"
         },
         "blog": {
-            "color__blogpostlist-title--text": "@color-swatch4",
+            "color__blogpostlist-title--text": "@font-swatch1-color",
             "color__blogpost-title--text": "@font-swatch1-color"
         },
         "ecommerce": {
