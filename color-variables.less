@@ -163,6 +163,7 @@ th,
 // Body 
 body {
 	background-color: @color__body--background;
+	color: @color__p--text;
 }
 
 
@@ -225,7 +226,7 @@ p {
 	color: @color__button--text;
 
 	&:hover {
-		background-color: @color__button--background--hover;
+		background-color: lighten(@color__button--background--hover, 10%);
 		color: @color__button--text--hover;
 	}
 }
@@ -249,16 +250,20 @@ button.ecombasket__basket-toggle,
 }
 
 .template-footer {
-	background-color: @color__footer--background;
+	background-color: darken(@color__footer--background, 5%);
 }
 
 
 // Navigation
 .extendednavigation {
 	background-color: @color__navigation--background;
-	color: @color__navigation--text;
 
-	&:hover {
+	&__navigation-item .item-name,
+	&__navigation-item.folder span.item-name {
+		color:  @color__navigation--text;;
+	}
+
+	&__item-name:hover {
 		color: @color__navigation--text--hover;
 	}
 
@@ -285,8 +290,9 @@ button.ecombasket__basket-toggle,
 
 // Feature
 .feature {
-	&__content-wrap {
-		background-color: @color__feature-content--background;
+
+	&__content-inner-wrap {
+		background-color: fade(@color__feature-content--background, 40%);
 	}
 
 	&__headline {
@@ -303,7 +309,7 @@ button.ecombasket__basket-toggle,
 	}
 
 	&__button:hover {
-		background-color: @color__feature-button--background--hover;
+		background-color: darken(@color__feature-button--background--hover, 10%);
 	}
 }
 
@@ -342,7 +348,7 @@ button.ecombasket__basket-toggle,
 // Gallery
 .gallery {
 	&__caption {
-		background-color: @color__gallery-caption--background;
+		background-color: fade(@color__gallery-caption--background, 65%);
 	}
 
 	&__image-title {
@@ -359,11 +365,11 @@ button.ecombasket__basket-toggle,
 .responsiveslideshow {
 
 	&__image-title {
-		color: @color__slideshow-title--text;
+		color: lighten(@color__slideshow-title--text, 30%);
 	}
 
 	&__image-description {
-		color: @color__slideshow-description--text;
+		color: lighten(@color__slideshow-description--text, 30%);
 	}
 
 	&__pagination-item {
@@ -400,7 +406,7 @@ button.ecombasket__basket-toggle,
 
 // Blog
 .blogpostlist {
-	&__post-title {
+	&__title-link {
 		color: @color__blogpostlist-title--text;
 	}
 }
@@ -414,7 +420,7 @@ button.ecombasket__basket-toggle,
 
 // Ecommerce
 .ecomproductslist {
-	&__product-title {
+	&__title-link {
 		color: @color__ecomproductslist-product-title--text;
 	}
 }
@@ -439,7 +445,10 @@ button.ecombasket__basket-toggle,
 }
 
 .ecombasket {
-	background-color: @color__ecombasket--background;
+
+	&__basket-body {
+		background-color: @color__ecombasket--background;
+	}
 
 	&__button {
 		background-color: @color__ecombasket-button--background;
@@ -447,7 +456,7 @@ button.ecombasket__basket-toggle,
 	}
 
 	&__button:hover {
-		background-color: @color__ecombasket-button--background--hover;
+		background-color: fade(@color__ecombasket-button--background--hover, 80%);
 		color: @color__ecombasket-button--text;
 	}
 }
