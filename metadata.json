@@ -207,7 +207,7 @@
             "color__image-description--text": "@color-swatch4"
         },
         "gallery": {
-            "color__gallery--background": "@color-swatch3",
+            "color__gallery-caption--background": "@color-swatch3",
             "color__gallery-title--text": "@color-swatch6",
             "color__gallery-description--text": "@color-swatch6"
         },
