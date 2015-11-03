@@ -223,12 +223,12 @@
             "color__socialicons--icon--background": "transparent"
         },
         "blog": {
-            "color__blogpostlist-title--text": "@font-swatch1-color",
+            "color__blogpostlist-title--text": "@color-swatch2",
             "color__blogpost-title--text": "@font-swatch1-color"
         },
         "ecommerce": {
             "color__ecomproductslist-product-title--text": "@font-swatch3-color",
-            "color__ecomproduct-title--text": "@font-swatch1-color;",
+            "color__ecomproduct-title--text": "@color-swatch2",
             "color__ecomproduct-price--text": "@color-swatch4",
             "color__ecombasket--background": "@color-swatch3",
             "color__ecombasket-button--background": "@color-swatch1",
