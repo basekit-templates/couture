@@ -68,12 +68,12 @@
 
 .company-link {
     @media @tablet {
-        font-size: bkscale(@font-swatch10-font-size,0.8);
-        line-height: bkscale(@font-swatch10-line-height,0.8);
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
     }
     @media @mobile {
-        font-size: bkscale(@font-swatch10-font-size,0.7);
-        line-height: bkscale(@font-swatch10-line-height,0.7);
+        font-size: bkscale(@font__companyname--font-size,0.7);
+        line-height: bkscale(@font__companyname--line-height,0.7);
     }
 }
 
@@ -120,13 +120,13 @@
 
 .imagewidget {
     .image-title {
-        font-size: @font-swatch2-font-size;
-        line-height: @font-swatch2-line-height;
+        font-size: @font__h2--font-size;
+        line-height: @font__h2--line-height;
         text-shadow: none;
     }
     .image-description {
-        font-size: @font-swatch5-font-size;
-        line-height: @font-swatch5-line-height;
+        font-size: @font__p--font-size;
+        line-height: @font__p--line-height;
         text-shadow: none;
     }
 }
@@ -169,21 +169,21 @@
         width: 32.5%;
         margin-bottom: 15px;
         .image-title {
-            font-family:@font-swatch3-font-family;
-            font-size:@font-swatch3-font-size;
-            font-weight: @font-swatch3-font-weight;
-            line-height:@font-swatch3-line-height;
+            font-family:@font__h3--font-family;
+            font-size:@font__h3--font-size;
+            font-weight: @font__h3--font-weight;
+            line-height:@font__h3--line-height;
             color: @font-swatch9-color;
-            letter-spacing: @font-swatch3-letter-spacing;
+            letter-spacing: @font__h3--letter-spacing;
             max-width: 100%;
         }
         .image-description {
-            font-family:@font-swatch5-font-family;
-            font-size:@font-swatch5-font-size;
-            font-weight: @font-swatch5-font-weight;
-            line-height:@font-swatch5-line-height;
+            font-family:@font__body;
+            font-size:@font__p--font-size;
+            font-weight: @font__p--font-weight;
+            line-height:@font__p--line-height;
             color: @font-swatch9-color;
-            letter-spacing: @font-swatch5-letter-spacing;
+            letter-spacing: @font__p--letter-spacing;
             max-width: 100%;
         }
     }  
@@ -275,8 +275,8 @@
     }
     .gallery-item {
         .image-title {
-            font-size: @font-swatch9-font-size;
-            line-height:@font-swatch9-line-height;
+            font-size: @font__feature-strapline--font-size;
+            line-height:@font__feature-strapline--line-height;
         }
     }
 }
@@ -285,8 +285,8 @@
 @media only screen and (max-width : 850px) {
     .gallery-item {
         .image-description {
-            font-size: bkscale(@font-swatch9-font-size,.9);
-            line-height:bkscale(@font-swatch9-line-height,.9);
+            font-size: bkscale(@font__feature-strapline--font-size,.9);
+            line-height:bkscale(@font__feature-strapline--line-height,.9);
         }
     }
 }
@@ -321,8 +321,8 @@
         text-shadow: none;
     }
     .image-title {
-        font-size: @font-swatch4-font-size;
-        line-height: @font-swatch4-line-height;
+        font-size: @font__h4--font-size;
+        line-height: @font__h4--line-height;
     }
 }
 
@@ -475,24 +475,24 @@
         transform: skew(-40deg);
     }
     @media @tablet {
-        font-size: bkscale(@font-swatch8-font-size,0.8);
-        line-height: bkscale(@font-swatch8-line-height,0.6);
+        font-size: bkscale(@font__feature-headline--font-size,0.8);
+        line-height: bkscale(@font__feature-headline--line-height,0.6);
     }
     @media @mobile {
-        font-size: bkscale(@font-swatch8-font-size,0.7);
-        line-height: bkscale(@font-swatch8-line-height,0.6);
+        font-size: bkscale(@font__feature-headline--font-size,0.7);
+        line-height: bkscale(@font__feature-headline--line-height,0.6);
     }
 }
 
 // Feature Strapline
 .feature__strapline {
     @media @tablet {
-        font-size: bkscale(@font-swatch9-font-size,0.9);
-        line-height: bkscale(@font-swatch9-line-height,0.8);
+        font-size: bkscale(@font__feature-strapline--font-size,0.9);
+        line-height: bkscale(@font__feature-strapline--line-height,0.8);
     }
     @media @mobile {
-        font-size: bkscale(@font-swatch9-font-size,0.8);
-        line-height: bkscale(@font-swatch9-line-height,0.7);
+        font-size: bkscale(@font__feature-strapline--font-size,0.8);
+        line-height: bkscale(@font__feature-strapline--line-height,0.7);
     }
 }
 
@@ -588,15 +588,15 @@
 
 .responsiveslideshow__image-title {
     color: @font-swatch7-color;
-    font-size: @font-swatch3-font-size;
-    line-height: @font-swatch3-line-height;
+    font-size: @font__h3--font-size;
+    line-height: @font__h3--line-height;
     text-shadow: none;
 }
 
 .responsiveslideshow__image-description {
     color: @font-swatch7-color;
-    font-size: @font-swatch5-font-size;
-    line-height: @font-swatch5-line-height;
+    font-size: @font__p--font-size;
+    line-height: @font__p--line-height;
     text-shadow: none;
 }
 
@@ -882,7 +882,7 @@ input.input[type=search],
 .signupform__legend {
     padding: 0;
     text-align: center;
-    font-size: @font-swatch3-font-size;
+    font-size: @font__h3--font-size;
     margin-bottom: 20px;
     padding-top: 20px;
     &:after {
@@ -1087,7 +1087,7 @@ input.input[type=search],
     vertical-align: top;
     width: 90%;
     a {
-        font-weight: @font-swatch1-font-weight;
+        font-weight: @font__h1--font-weight;
         word-wrap: break-word;
     }
     p {
@@ -1283,7 +1283,7 @@ input.input[type=search],
 }
 
 .yelp-reviews__review-title {
-    font-size: @font-swatch4-font-size;
+    font-size: @font__h4--font-size;
 }
 
 .yelpreview__review-item {
