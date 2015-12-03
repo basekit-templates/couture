@@ -1,0 +1,378 @@
+// Primary & Secondary Colours
+.navigation-item.folder.open .navigation-list,
+.contactform__label,
+.button,
+.feature__button,
+.contactform__button,
+.signupform__button,
+.paypalbuynow__button,
+.tweet__button,
+.dropbox__button,
+.responsiveslideshow__next-button, 
+.responsiveslideshow__previous-button, 
+.responsiveslideshow__pause-toggle,
+.button--pagination,
+.signupform__button,
+.blogpostlist__read-more,
+.blogpostlist__button,
+.blogsearch__button,
+.ecomproduct__button,
+.ecomproductslist__button,
+.button--quantity,
+.gallery__caption,
+.template-footer {
+    background-color: @color__primary;
+}
+
+
+
+.extendednavigation__navigation-item.selected,
+.navigation-item:hover,
+form,
+.form,
+.widget__twitter,
+.widget__menusections,
+.menu-item--featured, 
+.menu-section--featured,
+th,
+.ecomcategorieslist__category-list-body,
+.yelpreview__review-list {
+    background-color: @color__secondary;
+}
+
+
+.widget__content a,
+.blogpostlist__title-link,
+.product__category-link,
+.tag-link,
+.menu-item-name,
+.menu .item-subtitle,
+.product-item-title,
+.summary-item-link,
+.ecomcategorieslist__category-link {
+    color: @color__link--text;
+}
+
+
+
+// Body 
+body {
+    background-color: @color__body--background;
+    color: @color__p--text;
+}
+
+
+// Links
+a {
+    color: @color__link--text;
+
+    &:hover {
+        color: darken(@color__link--text, 5%);
+    }
+}
+
+
+// Company name
+.company-link {
+    color: @color__companyname--text;
+}
+
+
+// Headings & Paragraph text
+h1 {
+    color: @color__h1--text;
+}
+
+h2 {
+    color: @color__h2--text;
+}
+
+h3 {
+    color: @color__h3--text;
+}
+
+h4 {
+    color: @color__h4--text;
+}
+
+p {
+    color: @color__p--text;
+}
+
+
+// Buttons
+.button,
+.feature__button,
+.contactform__button,
+.signupform__button,
+.paypalbuynow__button,
+.tweet__button,
+.dropbox__button,
+.responsiveslideshow__next-button, 
+.responsiveslideshow__previous-button, 
+.responsiveslideshow__pause-toggle,
+.button--pagination,
+.signupform__button,
+.blogpostlist__read-more,
+.blogpostlist__button,
+.blogsearch__button,
+.button--quantity {
+    background-color: @color__button--background;
+    color: @color__button--text;
+
+    &:hover {
+        background-color: lighten(@color__button--background--hover, 10%);
+        color: @color__button--text--hover;
+    }
+}
+
+.ecomproductslist__button,
+button.ecombasket__basket-toggle,
+.blogpost__button,
+.button.item-remove {
+    background-color: transparent;
+    color: @color-swatch4;
+    &:hover {
+        background-color: transparent;
+        color: @color-swatch4;
+    }
+}
+
+
+// Layouts
+.template-header {
+    background-color: @color__header--background;
+}
+
+.template-footer {
+    background-color: darken(@color__footer--background, 5%);
+}
+
+
+// Navigation
+.extendednavigation {
+    background-color: @color__navigation--background;
+
+    &__navigation-item .item-name {
+        color:  @color__navigation--text;
+    }
+
+    &__navigation-item.folder .item-name:hover {
+        background-color: @color__navigation-item--background--hover;
+        color:  @color__navigation--text;
+    }
+
+    &__item-name:hover {
+        color: @color__navigation--text--hover;
+    }
+
+    &__navigation-item:hover {
+        background-color: @color__navigation-item--background--hover;
+        color: @color__navigation--text--hover;
+    }
+
+    &__navigation-item.selected {
+        background-color: @color__navigation-item--background--selected;
+
+        .item-name,
+        .text {
+            color: @color__navigation--text--selected;
+        }
+    }
+
+    li.selected a,
+    li:hover a {
+        color: @color__navigation--text--selected;
+    }
+}
+
+
+// Feature
+.feature {
+
+    &__content-inner-wrap {
+        background-color: fade(@color__feature-content--background, 40%);
+    }
+
+    &__headline {
+        color: @color__feature-headline--text;
+    }
+
+    &__strapline {
+        color: @color__feature-strapline--text;
+    }
+
+    &__button {
+        background-color: @color__feature-button--background;
+        color: @color__feature-button--text;
+    }
+
+    &__button:hover {
+        background-color: darken(@color__feature-button--background--hover, 10%);
+    }
+}
+
+
+// Forms
+.form {
+    background-color: @color__form--background;
+
+    .legend {
+        color: @color__form-legend--text;
+    }
+
+    .label {
+        color: @color__form-label--text;
+    }
+}
+
+.ecomproduct__product-actions .form,
+.ecombasketsummary__summary-form {
+    background-color: transparent;
+}
+
+
+// Image
+.imagewidget {
+    &__image-title {
+        color: @color__image-title--text;
+    }
+
+    &__image-description {
+        color: @color__image-description--text;
+    }
+}
+
+
+// Gallery
+.gallery {
+    &__caption {
+        background-color: fade(@color__gallery-caption--background, 65%);
+    }
+
+    &__image-title {
+        color: @color__gallery-title--text;
+    }
+
+    &__image-description {
+        color: @color__gallery-description--text;
+    }
+}
+
+
+// Slideshow
+.responsiveslideshow {
+
+    &__image-title {
+        color: lighten(@color__slideshow-title--text, 30%);
+    }
+
+    &__image-description {
+        color: lighten(@color__slideshow-description--text, 30%);
+    }
+
+    &__pagination-item {
+        background-color: @color__button--background;
+        color: @color__button--text;
+    }
+
+    &__pagination-item.selected {
+        background-color: @color__button--background;
+        border-color: lighten(@color__button--background, 20%);
+        color: @color__button--text;
+    }
+
+    &__pagination-item:hover {
+        color: @color__button--background--hover;
+    }
+}
+
+
+// Twitter
+.widget__twitter {
+    background-color: @color__twitter--background;
+}
+
+
+// Social icons
+.socialicons {
+    &__social-link {
+        background-color: @color__socialicons--icon--background;
+        color: @color__socialicons--icon;
+    }
+}
+
+
+// Blog
+.blogpostlist {
+    &__title-link {
+        color: @color__blogpostlist-title--text;
+    }
+}
+
+.blogpost {
+    &__post-title {
+        color: @color__blogpost-title--text;
+    }
+}
+
+
+// Ecommerce
+.ecomproductslist {
+    &__title-link {
+        color: @color__ecomproductslist-product-title--text;
+    }
+}
+
+.ecomproduct {
+    &__product-title {
+        color: @color__ecomproduct-title--text;
+    }
+
+    &__product-price {
+        color: @color__ecomproduct-price--text;
+    }
+
+    .product-add-to-cart-btn {
+        background-color: @color__secondary;
+    }
+
+    &__category-link,
+    &__tag-link {
+        color: @color__link--text;
+    }
+}
+
+.ecombasket {
+    &__basket-body {
+        background-color: @color__ecombasket--background;
+    }
+
+    &__button {
+        background-color: @color__ecombasket-button--background;
+        color: @color__ecombasket-button--text;
+    }
+
+    &__button:hover {
+        background-color: fade(@color__ecombasket-button--background--hover, 80%);
+        color: @color__ecombasket-button--text;
+    }
+}
+
+
+// Menu
+.menusections {
+    background-color: @color__menu-section-featured--background;
+}
+
+.menu {
+    &__section--featured,
+    &__section-footer {
+        background-color: @color__menu-section-featured--background;
+    }
+}
+
+.menusections,
+.menu .menu-item.featured {
+    background-color: @color__menu-section-featured--background;
+}
