@@ -12,9 +12,7 @@
 
     <div class="template-title-wrap">
         <div class="template-title">
-            <h1 style="padding-bottom: 0;">
-                <span>{{ page.title }}</span>
-            </h1>
+            {{widget('pagetitle', 'title', {})|raw}}
         </div>
     </div>
     	
