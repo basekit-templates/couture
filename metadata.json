@@ -1,5 +1,6 @@
 {
     "name":"Couture",
+    "versionTenCompatible": 1,
     "thumbnail":"couture.png",
     "screenshot":"couture-screenshot.jpg",
     "tags": {
