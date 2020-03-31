@@ -1,0 +1,106 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+    // Stylesheet overrides
+    // -----------------------------
+
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    
+    .contactform__input, .contactform__textarea {
+        float: inherit;
+        width: 100% !important;
+        
+        @media @tablet {
+            width: 100% !important;
+        }
+    }
+    
+    .ecom-product {
+        padding: 0;
+    }
+    
+    .blogpost__post-footer .timestamp {
+        padding-left: 0;
+    }
+
+
+
+
+    // Migration styles
+    // -----------------------------
+    
+    
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 20px;
+    }
+
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 20px;
+    }
+    
+    
+    // Widget styles
+    [data-name="row"] {
+       .bk-signupform.signupform,
+       .bk-contactform.contactform {
+           max-width: 800px;
+           margin: 0 auto;
+       }
+       .label--radio,
+       .label--checkbox {
+           text-align: left;
+       }
+       [data-name*="form"] .form-body .button {
+           display: block;
+           margin: 16px auto 0;
+       }
+       .ecomproductslist__fieldset--search .ecomproductslist__form-group:nth-child(2) {
+           padding-top: 33px;
+           
+           @media @tablet {
+               padding-top: 0;
+           }
+       }
+       .button--submit.ecomproductslist__button {
+           width: 38px;
+           height: 36px;
+           
+           &:after {
+               height: 35px;
+               line-height: 35px;
+           }
+       }
+    }
+
+
+}
